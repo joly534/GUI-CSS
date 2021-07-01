@@ -22,8 +22,8 @@
 			<!-- ======================================================= -->
 			<div class="zone_texte">
 				<input id="text" type="text" placeholder="entrez votre texte ici" name="texte">
-				<input type="submit" value='Valider'>
-				<input type="reset" value='Effacer'>
+				<button onclick='validate()'>Valider</button>
+				<button onclick='resetInput()'>Effacer</button>
 			</div>
 		</header>
 		
@@ -32,22 +32,14 @@
 			<!-- ==================== MENU ===================== -->
 			<!-- =============================================== -->
 			<nav>	
-				<!-- ==================== FONT SIZE ==================== -->			
-				<div class="propriete">
-					<div class="entete">
-						<p>font-size</p>						
-					</div>
-					<div class="control">
-						10<input id='fontSize' type="range" value="10" max="100" min="10" step="1" name="font-size">100
-						<div id="valfs" class="val"></div>
-					</div>		
-				</div>
 				<form>
 					<!-- ==================== FONT SIZE ==================== -->
-					<fieldset id="fontSize">
+					<fieldset id="fontSize" class="flex_row">
 					   <legend>font-size</legend>
-					   10<input type="range" value="10" max="100" min="10" step="1" name="fontSize" oninput="setFontSize(this.value)" onchange="setFontSize(this.value)>100
+					   <input type="range" value="10" max="100" min="10" step="1" name="fontSize" oninput="changeFontSize(this.value)" onchange="changeFontSize(this.value)">
+					   <span id="resultFontSize"></span>
 					</fieldset>
+
 					<!-- ==================== FONT WEIGHT ==================== -->
 					<fieldset>
 						<legend>font-weight</legend>

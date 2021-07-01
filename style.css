@@ -103,6 +103,12 @@ form{
 fieldset{
 	border-color: darkred;
 }
+
+.flex_row{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between ;
+}
 /*************************************************************/
 /********************* controleur visuel *********************/
 /*************************************************************/
@@ -115,11 +121,14 @@ fieldset{
 }
 #vue{
 	position: absolute;
-	top: 40%;
-	left: 45%;
+	top: 42%;
+	left: 29%;
 
 }
-
+input[type="range"]{
+	width: 80%;
+	color: aqua;
+}
 input[type="range"]:before{
 	margin-left: -1em;
    content: attr(min);

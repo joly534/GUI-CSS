@@ -1,22 +1,23 @@
 let text = document.getElementById('text');
 let vue = document.getElementById('vue');
-let texte = text.value;
 
-let value = document.getElementById('value')
 
-vue.append(texte);
-
-function setFontSize(valueSizeFont){
-	let size = valueSizeFont;
-	console.log(size);
-	return size;
+function validate(){
+	vue.innerHTML='';
+	vue.append(text.value);
 }
-function changeSize(text){
-	let size = setFontSize(valueSizeFont);
-	text.style.fontsize = size;
+
+function resetInput(){
+	text.value='';
 }
+
+function changeFontSize(valueSizeFont){
+	let resultat= document.getElementById('resultFontSize');
+	vue.style.fontSize = (valueSizeFont).toString() + 'px';
+	resultat.innerHTML = (valueSizeFont).toString() + 'px';
+}
+
 
 function update() {
-	changeSize(texte);
 }
 update()
