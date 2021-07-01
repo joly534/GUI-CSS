@@ -33,57 +33,67 @@
 			<!-- =============================================== -->
 			<nav>	
 				<form>
+					<!-- ==================== FONT FAMILY ==================== -->
+					<fieldset id="fontFamily">
+						<legend>Font Family</legend><br/>
+						<select name ="fontFamily" oninput ="changeFontFamily(this.value)" onchange ="changeFontFamily(this.value)">
+							<option value = "">-- Choisissez une police d'écriture --</option>
+							<option value = "serif">serif</option>
+							<option value = "sans-serif">sans-serif</option>
+							<option value = "monospace">monospace</option>
+							<option value = "cursive">cursive</option>
+						</select><br/><br/>
+					</fieldset>
+
 					<!-- ==================== FONT SIZE ==================== -->
-					<fieldset id="fontSize" class="flex_row">
-					   <legend>font-size</legend>
-					   <input type="range" value="10" max="100" min="10" step="1" name="fontSize" oninput="changeFontSize(this.value)" onchange="changeFontSize(this.value)">
-					   <span id="resultFontSize"></span>
+					<fieldset id ="fontSize" class ="flex_row">
+					   <legend>Font Size</legend>
+					   <input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "changeFontSize(this.value)" onchange ="changeFontSize(this.value)">
+					   <span id ="resultFontSize"></span>
 					</fieldset>
 
 					<!-- ==================== FONT WEIGHT ==================== -->
 					<fieldset>
-						<legend>font-weight</legend>
-						<input type="radio" name="fontWeight" value="400">
-						<label>400</label>
-						<input type="radio" name="fontWeight" value="500">
-						<label>500</label>
-						<input type="radio" name="fontWeight" value="600">
-						<label>600</label>
-						<input type="radio" name="fontWeight" value="700">
-						<label>700</label>
-						<input type="radio" name="fontWeight" value="800">
-						<label>800</label>
-						<input type="radio" name="fontWeight" value="900">
-						<label>900</label>
+						<legend>Font Weight</legend><br/>
+						<select name ="fontWeight" oninput ="changeFontWeight(this.value)" onchange ="changeFontWeight(this.value)">
+							<option value = "">-- Choisissez une épaisseur d'écriture --</option>
+							<option value = "100">100</option>
+							<option value = "200">200</option>
+							<option value = "300">300</option>
+							<option value = "400">400</option>
+							<option value = "500">500</option>
+							<option value = "600">600</option>
+							<option value = "700">700</option>
+							<option value = "800">800</option>
+							<option value = "900">900</option>
+						</select><br/><br/>
 					</fieldset>
+
 					<!-- ==================== FONT COLOR ==================== -->
-					<fieldset id="fColor">
-						<legend>font-color</legend>
-						<input type="radio" name="fontColor" value="black" checked>
-						<label for="cblack">black</label>
-						<input type="radio" name="fontColor" value="yellow">
-						<label for="cyellow">yellow</label>
-						<input type="radio" name="fontColor" value="orange">
-						<label for="corange">orange</label>
-						<input type="radio" name="fontColor" value="blue">
-						<label for="cblue">blue</label>
-						<input type="radio" name="fontColor" value="red">
-						<label for="cred">red</label>
-						<input type="radio" name="fontColor" value="green">
-						<label for="cgreen">green</label>
+					<fieldset>
+						<legend>Font Color</legend><br/>
+						<select name ="fontColor" oninput ="changeFontColor(this.value)" onchange ="changeFontColor(this.value)">
+							<option value = "">-- Choisissez une couleur d'écriture --</option>
+							<option value = "black">noire</option>
+							<option value = "red">rouge</option>
+							<option value = "blue">bleu</option>
+							<option value = "green">vert</option>
+							<option value = "yellow">jaune</option>
+							<option value = "orange">orange</option>
+							<option value = "brown">marron</option>
+							<option value = "grey">gris</option>
+							<option value = "lime">lime</option>
+						</select>
+						<!-- <br/><br/>
+						<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "changeFontRgbColorOne(this.value)" onchange ="changeFontRgbColor(this.value)">
+						<span id ="resultFontRgbColorOne"></span>
+						<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "changeFontRgbColorTwo(this.value)" onchange ="changeFontRgbColor(this.value)">
+						<span id ="resultFontRgbColorTwo"></span>
+						<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "changeFontRgbColorThree(this.value)" onchange ="changeFontRgbColor(this.value)">
+						<span id ="resultFontRgbColorThree"></span> -->
 					</fieldset>
 				</form>	
 					
-				<!-- ==================== FONT COLOR ==================== -->			
-				<div class="propriete">
-					<div class="entete">
-						<p>font-color</p>
-					</div>		
-					<div class="control">
-						<input id="fontColor" type="range" value="1" max="255" min="0" step="1" name="">255
-						<div id="valfs"></div>
-					</div>
-				</div>
 				<!-- ==================== TEXT SHADOW ==================== -->
 				<div class="propriete">
 					<div class="entete">
