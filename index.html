@@ -72,98 +72,98 @@
 					<!-- ==================== FONT COLOR ==================== -->
 					<fieldset>
 						<legend>Font Color</legend><br/>
-						<select name ="fontColor" oninput ="changeFontColor(this.value)" onchange ="changeFontColor(this.value)">
-							<option value = "">-- Choisissez une couleur d'écriture --</option>
-							<option value = "black">noire</option>
-							<option value = "red">rouge</option>
-							<option value = "blue">bleu</option>
-							<option value = "green">vert</option>
-							<option value = "yellow">jaune</option>
-							<option value = "orange">orange</option>
-							<option value = "brown">marron</option>
-							<option value = "grey">gris</option>
-							<option value = "lime">lime</option>
-						</select>
-						<!-- <br/><br/>
-						<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "changeFontRgbColorOne(this.value)" onchange ="changeFontRgbColor(this.value)">
-						<span id ="resultFontRgbColorOne"></span>
-						<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "changeFontRgbColorTwo(this.value)" onchange ="changeFontRgbColor(this.value)">
-						<span id ="resultFontRgbColorTwo"></span>
-						<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "changeFontRgbColorThree(this.value)" onchange ="changeFontRgbColor(this.value)">
-						<span id ="resultFontRgbColorThree"></span> -->
+						<span id="RGB"></span><br/><br/>
+						<div class ="flex_row">
+							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontOne(this.value)" 
+																							onchange ="setRgbColorFontOne(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontTwo(this.value)" 
+																							onchange ="setRgbColorFontTwo(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontThree(this.value)" 
+																							onchange ="setRgbColorFontThree(this.value)">
+						</div>
 					</fieldset>
-				</form>	
 					
-				<!-- ==================== TEXT SHADOW ==================== -->
-				<div class="propriete">
-					<div class="entete">
-						<p>text-shadow</p>
-					</div>		
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
-					</div>
-				</div>	
-				<!-- ==================== TEXT ALIGN ==================== -->
-				<div class="propriete">
-					<div class="entete">
-						<p>text-align</p>
-					</div>		
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
-					</div>
-				</div>	
-				<!-- ==================== MARGIN ==================== -->
-				<div class="propriete">
-					<div class="entete">
-						<p>margin</p>
-					</div>		
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
-					</div>
-				</div>
-				<!-- ==================== PADDING ==================== -->
-				<div class="propriete">
-					<div class="entete">
-						<p>padding</p>
-					</div>		
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
-					</div>
-				</div>	
-				<!-- ==================== BORDER TYPE ==================== -->
-				<div class="propriete">
-					<div class="entete">
-						<p>border</p>
+					<!-- ==================== TEXT SHADOW ==================== -->
+					<fieldset>
+						<legend>Text Shadow</legend><br/>
+						<span id="text_shadow"></span>
+						<div class ="flex_row">
+							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowX(this.value)" 
+								onchange ="setTextShadowX(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowY(this.value)" 
+								onchange ="setTextShadowY(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowBlur(this.value)" 
+								onchange ="setTextShadowBlur(this.value)">
+						</div>
+					</fieldset>
+					<!-- ==================== TEXT ALIGN ==================== -->
+					<div class="propriete">
+						<div class="entete">
+							<p>text-align</p>
+						</div>		
+						<div class="control">
+							<input type="range" name="">
+							<div class="val"></div>
+						</div>
 					</div>	
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
+					<!-- ==================== MARGIN ==================== -->
+					<div class="propriete">
+						<div class="entete">
+							<p>margin</p>
+						</div>		
+						<div class="control">
+							<input type="range" name="">
+							<div class="val"></div>
+						</div>
 					</div>
-				</div>	
-				<!-- ==================== BOX SHADOW ==================== -->			
-				<div class="propriete">
-					<div class="entete">
-						<p>box-shadow</p>
+					<!-- ==================== PADDING ==================== -->
+					<div class="propriete">
+						<div class="entete">
+							<p>padding</p>
+						</div>		
+						<div class="control">
+							<input type="range" name="">
+							<div class="val"></div>
+						</div>
 					</div>	
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
-					</div>
-				</div>
-				<!-- ==================== BACKGROUND COLOR ==================== -->
-				<div class="propriete">
-					<div class="entete">
-						<p>background-color</p>
+					<!-- ==================== BORDER TYPE ==================== -->
+					<div class="propriete">
+						<div class="entete">
+							<p>border</p>
+						</div>	
+						<div class="control">
+							<input type="range" name="">
+							<div class="val"></div>
+						</div>
 					</div>	
-					<div class="control">
-						<input type="range" name="">
-						<div class="val"></div>
+					<!-- ==================== BOX SHADOW ==================== -->			
+					<div class="propriete">
+						<div class="entete">
+							<p>box-shadow</p>
+						</div>	
+						<div class="control">
+							<input type="range" name="">
+							<div class="val"></div>
+						</div>
 					</div>
-				</div>	
+					<!-- ==================== BACKGROUND COLOR ==================== -->
+					<div class="propriete">
+						<div class="entete">
+							<p>background-color</p>
+						</div>	
+						<div class="control">
+							<input type="range" name="">
+							<div class="val"></div>
+						</div>
+					</div>	
 
 			</div>
 			<!-- ======================================= -->
