@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+	<head>
+		<title>CSS VIEWER</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- ==================== FONT AWESOME ==================== -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<!-- ==================== CSS ==================== -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<!-- ============================================== -->
+			<!-- ==================== LOGO ==================== -->
+			<!-- ============================================== -->
+			<h1>CSS VIEWER</h1>
+			<!-- ======================================================= -->
+			<!-- ==================== ZONE DE TEXTE ==================== -->
+			<!-- ======================================================= -->
+			<div class="zone_texte">
+				<input id="text" type="text" placeholder="entrez votre texte ici" name="texte">
+				<input type="submit" value='Valider'>
+				<input type="reset" value='Effacer'>
+			</div>
+		</header>
+		
+		<div class="section">
+			<!-- =============================================== -->
+			<!-- ==================== MENU ===================== -->
+			<!-- =============================================== -->
+			<nav>	
+				<!-- ==================== FONT SIZE ==================== -->			
+				<div class="propriete">
+					<div class="entete">
+						<p>font-size</p>						
+					</div>
+					<div class="control">
+						10<input id='fontSize' type="range" value="10" max="100" min="10" step="1" name="font-size">100
+						<div id="valfs" class="val"></div>
+					</div>		
+				</div>
+				<form>
+					<!-- ==================== FONT SIZE ==================== -->
+					<fieldset id="fontSize">
+					   <legend>font-size</legend>
+					   10<input type="range" value="10" max="100" min="10" step="1" name="fontSize" oninput="setFontSize(this.value)" onchange="setFontSize(this.value)>100
+					</fieldset>
+					<!-- ==================== FONT WEIGHT ==================== -->
+					<fieldset>
+						<legend>font-weight</legend>
+						<input type="radio" name="fontWeight" value="400">
+						<label>400</label>
+						<input type="radio" name="fontWeight" value="500">
+						<label>500</label>
+						<input type="radio" name="fontWeight" value="600">
+						<label>600</label>
+						<input type="radio" name="fontWeight" value="700">
+						<label>700</label>
+						<input type="radio" name="fontWeight" value="800">
+						<label>800</label>
+						<input type="radio" name="fontWeight" value="900">
+						<label>900</label>
+					</fieldset>
+					<!-- ==================== FONT COLOR ==================== -->
+					<fieldset id="fColor">
+						<legend>font-color</legend>
+						<input type="radio" name="fontColor" value="black" checked>
+						<label for="cblack">black</label>
+						<input type="radio" name="fontColor" value="yellow">
+						<label for="cyellow">yellow</label>
+						<input type="radio" name="fontColor" value="orange">
+						<label for="corange">orange</label>
+						<input type="radio" name="fontColor" value="blue">
+						<label for="cblue">blue</label>
+						<input type="radio" name="fontColor" value="red">
+						<label for="cred">red</label>
+						<input type="radio" name="fontColor" value="green">
+						<label for="cgreen">green</label>
+					</fieldset>
+				</form>	
+					
+				<!-- ==================== FONT COLOR ==================== -->			
+				<div class="propriete">
+					<div class="entete">
+						<p>font-color</p>
+					</div>		
+					<div class="control">
+						<input id="fontColor" type="range" value="1" max="255" min="0" step="1" name="">255
+						<div id="valfs"></div>
+					</div>
+				</div>
+				<!-- ==================== TEXT SHADOW ==================== -->
+				<div class="propriete">
+					<div class="entete">
+						<p>text-shadow</p>
+					</div>		
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>	
+				<!-- ==================== TEXT ALIGN ==================== -->
+				<div class="propriete">
+					<div class="entete">
+						<p>text-align</p>
+					</div>		
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>	
+				<!-- ==================== MARGIN ==================== -->
+				<div class="propriete">
+					<div class="entete">
+						<p>margin</p>
+					</div>		
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>
+				<!-- ==================== PADDING ==================== -->
+				<div class="propriete">
+					<div class="entete">
+						<p>padding</p>
+					</div>		
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>	
+				<!-- ==================== BORDER TYPE ==================== -->
+				<div class="propriete">
+					<div class="entete">
+						<p>border</p>
+					</div>	
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>	
+				<!-- ==================== BOX SHADOW ==================== -->			
+				<div class="propriete">
+					<div class="entete">
+						<p>box-shadow</p>
+					</div>	
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>
+				<!-- ==================== BACKGROUND COLOR ==================== -->
+				<div class="propriete">
+					<div class="entete">
+						<p>background-color</p>
+					</div>	
+					<div class="control">
+						<input type="range" name="">
+						<div class="val"></div>
+					</div>
+				</div>	
+
+			</nav>
+			<!-- ======================================= -->
+			<!-- ========== CONTROLEUR VISUEL ========== -->
+			<!-- ======================================= -->
+			<div id="zone">
+				<div id="vue" class="visuel"></div>	
+
+			</div>
+		</div>
+
+		<!-- ==================== JQUERY ==================== -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- ==================== JAVASCRIPT ==================== -->
+		<script src="script.js"></script>
+
+	</body>
+
+</html>
