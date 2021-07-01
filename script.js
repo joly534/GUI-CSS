@@ -17,6 +17,38 @@ function changeFontSize(valueSizeFont){
 	resultat.innerHTML = (valueSizeFont).toString() + 'px';
 }
 
+function changeFontFamily(valueFamilyFont){
+	vue.style.fontFamily = valueFamilyFont;
+}
+
+function changeFontWeight(valueWeightFont){
+	vue.style.fontWeight = valueWeightFont;
+}
+
+function changeFontColor(valueColorFont){
+	
+	vue.style.color = valueColorFont;
+}
+
+// function changeFontRgbColorOne(valueColorFont){
+// 	let rgbOne = (valueColorFont).toString();
+// 	return rgbOne;
+// }
+// function changeFontRgbColorTwo(valueColorFont){
+// 	let rgbTwo = (valueColorFont).toString();
+// 	return rgbTwo;
+// }
+// function changeFontRgbColorThree(valueColorFont){
+// 	let rgbThree = (valueColorFont).toString();
+// 	return rgbThree;
+// }
+// function changeFontRgbColor(){
+// 	let rgbOne = changeFontRgbColorOne(valueColorFont);
+// 	let rgbOne = changeFontRgbColorTwo(valueColorFont);
+// 	let rgbOne = changeFontRgbColorThree(valueColorFont);
+// 	vue.style.color ="rgb(" + rgbOne + "," + rgbTwo + "," + rgbThree + ")";
+// }
+
 
 function update() {
 }
