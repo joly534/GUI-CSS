@@ -1,6 +1,6 @@
 # GUI-CSS
  
-An easy way to visualize how your CSS change your text !!!
+An easy way to visualize how your CSS code change your text !!!
 
 Un moyen simple de voir copmment votre code CSS change votre texte !!!
 
