@@ -59,8 +59,10 @@
 
 					<!-- ==================== FONT WEIGHT ==================== -->
 					<fieldset>
-						<legend>Font Weight</legend><br/>
-						<select name ="fontWeight" oninput ="changeFontWeight(this.value)" onchange ="changeFontWeight(this.value)">
+						<legend>Font Weight</legend>
+						<span id="css_font_weight"></span>
+						<br/><br/>
+						<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
 							<option value = "">-- Choisissez une épaisseur d'écriture --</option>
 							<option value = "100">100</option>
 							<option value = "200">200</option>
@@ -76,7 +78,7 @@
 
 					<!-- ==================== FONT COLOR ==================== -->
 					<fieldset>
-						<legend>Font Color</legend><br/>
+						<legend>Font Color</legend>
 						<span id="RGB"></span><br/><br/>
 						<div class ="flex_row">
 							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontOne(this.value)" 
@@ -94,8 +96,9 @@
 					
 					<!-- ==================== TEXT SHADOW ==================== -->
 					<fieldset>
-						<legend>Text Shadow</legend><br/>
+						<legend>Text Shadow</legend>
 						<span id="text_shadow"></span>
+						<br/><br/>
 						<div class ="flex_row">
 							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowX(this.value)" 
 								onchange ="setTextShadowX(this.value)">
@@ -109,10 +112,13 @@
 								onchange ="setTextShadowBlur(this.value)">
 						</div>
 					</fieldset>
+
 					<!-- ==================== TEXT ALIGN ==================== -->
 					<fieldset>
-						<legend>Text Align</legend><br/>
-						<select name ="fontWeight" oninput ="changeTextAlign(this.value)" onchange ="changeTextAlign(this.value)">
+						<legend>Text Align</legend>
+						<span id="css_text_align"></span>
+						<br/><br/>
+						<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
 							<option value = "">-- Choisissez un alignement pour le texte --</option>
 							<option value = "left">Left</option>
 							<option value = "center">Center</option>
