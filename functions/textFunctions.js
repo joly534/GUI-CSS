@@ -1,4 +1,4 @@
-//** FONCTION DE CHANGEMENT DE POLICE D'ECRITURE */
+//** FONCTION DE LA POLICE D'ECRITURE */
 function setFontFamily(valueFamilyFont){
 	fontFamily.splice(0,1,valueFamilyFont);
 }
@@ -9,22 +9,29 @@ function changeFontFamily(){
 }
 /** FIN */
 
-//** FONCTION DE CHANGEMENT DE TAILLE DE POLICE */
+//** FONCTION DE LA TAILLE DE POLICE */
 function setFontSize(valueSizeFont){
     fontSize.splice(0,1,valueSizeFont);
 }
 function changeFontSize(){
 	let cssInfos= document.getElementById('css_font_size');
-	cssInfos.innerHTML = 'font-size :' + fontSize[0] +  'px';
+	cssInfos.innerHTML = 'font-size : ' + fontSize[0] +  'px;';
 	vue.style.fontSize = fontSize[0] + 'px';
 }
 /** FIN */
 
-function changeFontWeight(valueWeightFont){
-	vue.style.fontWeight = valueWeightFont;
+//** FONCTION DE L'EPAISSEUR DE POLICE */
+function setFontWeight(valueWeightFont){
+	weight.splice(0,1,'valueWeightFont');
 }
+function changeFontWeight(){
+	let cssInfos = document.getElementById('css_font_weight');
+	cssInfos.innerHTML = "font-weight : " + weight[0] + ';';
+	vue.style.fontWeight = weight[0];
+}
+/** FIN */
 
-/** FONCTIONS DE PARAMETRAGE DE LA COULEUR DU TEXTE */
+/** FONCTIONS DE LA COULEUR DU TEXTE */
 function setRgbColorFontOne(valueColorFont){
 	rgbcolors.splice(0,1,valueColorFont);
 }
@@ -36,7 +43,7 @@ function setRgbColorFontThree(valueColorFont){
 }
 function changeFontRgbColor(){
 	let rgb = document.getElementById('RGB');
-	rgb.innerHTML = "rgb(" + rgbcolors[0] + "," + rgbcolors[1] + "," + rgbcolors[2] + ")";
+	rgb.innerHTML = "color : rgb(" + rgbcolors[0] + "," + rgbcolors[1] + "," + rgbcolors[2] + ");";
 	vue.style.color ="rgb(" + rgbcolors[0] + "," + rgbcolors[1] + "," + rgbcolors[2] + ")";
 }
 /** FIN */
@@ -57,4 +64,16 @@ function changeTextShadow(){
 	vue.style.textShadow = '"' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black"';
 	console.log(textShadows);
 }
+/** FIN */
+
+/** FONCTIONS DE PARAMETRAGE DU TEXT-ALIGN */
+function setTextAlign(valueTextAlign){
+	alignement.splice(0,1,valueTextAlign);
+}
+function changeTextAlign(){
+	let cssInfos = document.getElementById('css_text_align');
+	cssInfos.innerHTML = "text-align : " + alignement[0] + ';';
+	vue.style.textAlign = alignement[0]
+}
+
 /** FIN */
