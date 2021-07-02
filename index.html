@@ -36,7 +36,9 @@
 					<!-- ==================== FONT FAMILY ==================== -->
 					<fieldset id="fontFamily">
 						<legend>Font Family</legend><br/>
-						<select name ="fontFamily" oninput ="changeFontFamily(this.value)" onchange ="changeFontFamily(this.value)">
+						<span id="css_font_family"></span>
+						<br/><br/>
+						<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
 							<option value = "">-- Choisissez une police d'écriture --</option>
 							<option value = "serif">serif</option>
 							<option value = "sans-serif">sans-serif</option>
@@ -48,8 +50,11 @@
 					<!-- ==================== FONT SIZE ==================== -->
 					<fieldset id ="fontSize" class ="flex_row">
 					   <legend>Font Size</legend>
-					   <input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "changeFontSize(this.value)" onchange ="changeFontSize(this.value)">
-					   <span id ="resultFontSize"></span>
+					   <span id="css_font_size"></span>
+					   <br/><br/>
+					   <div>
+						<input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
+					   </div>
 					</fieldset>
 
 					<!-- ==================== FONT WEIGHT ==================== -->
@@ -105,15 +110,16 @@
 						</div>
 					</fieldset>
 					<!-- ==================== TEXT ALIGN ==================== -->
-					<div class="propriete">
-						<div class="entete">
-							<p>text-align</p>
-						</div>		
-						<div class="control">
-							<input type="range" name="">
-							<div class="val"></div>
-						</div>
-					</div>	
+					<fieldset>
+						<legend>Text Align</legend><br/>
+						<select name ="fontWeight" oninput ="changeTextAlign(this.value)" onchange ="changeTextAlign(this.value)">
+							<option value = "">-- Choisissez un alignement pour le texte --</option>
+							<option value = "left">Left</option>
+							<option value = "center">Center</option>
+							<option value = "right">Right</option>
+							<option value = "justify">Justify</option>
+						</select><br/><br/>
+					</fieldset>
 					<!-- ==================== MARGIN ==================== -->
 					<div class="propriete">
 						<div class="entete">
@@ -177,6 +183,7 @@
 
 		<!-- ==================== JAVASCRIPT ==================== -->
 		<script src="script.js"></script>
+		<script src="functions/textFunctions.js"></script>
 
 	</body>
 
