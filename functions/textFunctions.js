@@ -16,7 +16,7 @@ function setFontSize(valueSizeFont){
 function changeFontSize(){
 	let cssInfos= document.getElementById('css_font_size');
 	cssInfos.innerHTML = 'font-size :' + fontSize[0] +  'px';
-	vue.style.fontSize = (valueSizeFont).toString() + 'px';
+	vue.style.fontSize = fontSize[0] + 'px';
 }
 /** FIN */
 
