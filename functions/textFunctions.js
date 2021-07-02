@@ -33,18 +33,18 @@ function changeFontWeight(){
 
 /** FONCTIONS DE LA COULEUR DU TEXTE */
 function setRgbColorFontOne(valueColorFont){
-	rgbcolors.splice(0,1,valueColorFont);
+	fontRgbcolors.splice(0,1,valueColorFont);
 }
 function setRgbColorFontTwo(valueColorFont){
-	rgbcolors.splice(1,1,valueColorFont);
+	fontRgbcolors.splice(1,1,valueColorFont);
 }
 function setRgbColorFontThree(valueColorFont){
-	rgbcolors.splice(2,1,valueColorFont);	
+	fontRgbcolors.splice(2,1,valueColorFont);	
 }
 function changeFontRgbColor(){
 	let rgb = document.getElementById('RGB');
-	rgb.innerHTML = "color : rgb(" + rgbcolors[0] + "," + rgbcolors[1] + "," + rgbcolors[2] + ");";
-	vue.style.color ="rgb(" + rgbcolors[0] + "," + rgbcolors[1] + "," + rgbcolors[2] + ")";
+	rgb.innerHTML = "color : rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ");";
+	vue.style.color ="rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ")";
 }
 /** FIN */
 
