@@ -90,7 +90,8 @@ form{
 }
 
 fieldset{
-	border-color: darkred;
+	border:6px outset aqua;
+	color: lime;
 }
 
 .flex_row{
