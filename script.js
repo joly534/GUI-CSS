@@ -4,7 +4,9 @@ let fontFamily = [];
 let fontSize = [];
 let weight = [];
 let alignement = [];
-let rgbcolors = ["125","125","125"];
+let border = [];
+let fontRgbcolors = ["125","125","125"];
+let backgroundColors = ["255" , "255" , "255"];
 let textShadows = ["5","5","5"];
 
 function validate(){
@@ -25,7 +27,11 @@ function update() {
 	changeFontWeight();
 	changeFontRgbColor();
 	changeTextShadow();
-	changeTextAlign()
+	changeTextAlign();
+	changeBackgroundColor();
+	changeBorderWidth();
+	changeBorderStyle();
+	changeBorderColor();
 	
 window.requestAnimationFrame(update);
 }

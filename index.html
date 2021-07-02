@@ -33,6 +33,7 @@
 			<!-- =============================================== -->
 			<div>	
 				<form>
+					
 					<!-- ==================== FONT FAMILY ==================== -->
 					<fieldset id="fontFamily">
 						<legend>Font Family</legend><br/>
@@ -125,6 +126,69 @@
 							<option value = "right">Right</option>
 							<option value = "justify">Justify</option>
 						</select><br/><br/>
+					</fieldset><!-- ==================== BACKGROUND COLOR ==================== -->
+					<fieldset>
+						<legend>Background Color</legend>
+						<span id="css_background_color"></span>
+						<br/><br/>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorOne(this.value)" 
+																								onchange ="setRgbBackgroundColorOne(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorTwo(this.value)" 
+																								onchange ="setRgbBackgroundColorTwo(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorThree(this.value)" 
+																								onchange ="setRgbBackgroundColorThree(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="1" min ="0" step ="0.1" oninput = "setRgbBackgroundColorOpacity(this.value)" 
+																								onchange ="setRgbBackgroundColorOpacity(this.value)">
+							</div>
+						</select><br/><br/>
+					</fieldset>
+					<!-- ==================== BORDER TYPE ==================== -->
+					<fieldset>
+						<legend>Border</legend><br/>
+						<span id="css_border_width"></span>
+						<br/><br/>
+						<div class ="flex_row">
+							<input type ="range" value ="0" max ="20" min ="0" step ="1" oninput = "setBorderWidth(this.value)" 
+																							onchange ="setBorderWidth(this.value)">
+						</div><br/>
+						<span id="css_border_style"></span>
+						<br/><br/>
+						<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
+							<option value = "">-- Choisissez un style de bordure --</option>
+							<option value = "none">none</option>
+							<option value = "hidden">hidden</option>
+							<option value = "dotted">dotted</option>
+							<option value = "dashed">dashed</option>
+							<option value = "solid">solid</option>
+							<option value = "double">double</option>
+							<option value = "groove">groove</option>
+							<option value = "ridge">ridge</option>
+							<option value = "inset">inset</option>
+							<option value = "outset">outset</option>
+							<option value = "initial">initial</option>
+							<option value = "inherit">inherit</option>
+						</select><br/><br/>
+						<span id="css_border_color"></span>
+						<br/><br/>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorOne(this.value)" 
+																								onchange ="setBorderColorOne(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorTwo(this.value)" 
+																								onchange ="setBorderColorTwo(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorThree(this.value)" 
+																								onchange ="setBorderColorThree(this.value)">
+							</div>
 					</fieldset>
 					<!-- ==================== MARGIN ==================== -->
 					<div class="propriete">
@@ -145,17 +209,7 @@
 							<input type="range" name="">
 							<div class="val"></div>
 						</div>
-					</div>	
-					<!-- ==================== BORDER TYPE ==================== -->
-					<div class="propriete">
-						<div class="entete">
-							<p>border</p>
-						</div>	
-						<div class="control">
-							<input type="range" name="">
-							<div class="val"></div>
-						</div>
-					</div>	
+					</div>
 					<!-- ==================== BOX SHADOW ==================== -->			
 					<div class="propriete">
 						<div class="entete">
@@ -166,17 +220,7 @@
 							<div class="val"></div>
 						</div>
 					</div>
-					<!-- ==================== BACKGROUND COLOR ==================== -->
-					<div class="propriete">
-						<div class="entete">
-							<p>background-color</p>
-						</div>	
-						<div class="control">
-							<input type="range" name="">
-							<div class="val"></div>
-						</div>
-					</div>	
-
+					</form>
 			</div>
 			<!-- ======================================= -->
 			<!-- ========== CONTROLEUR VISUEL ========== -->
@@ -190,6 +234,7 @@
 		<!-- ==================== JAVASCRIPT ==================== -->
 		<script src="script.js"></script>
 		<script src="functions/textFunctions.js"></script>
+		<script src="functions/boxFunctions.js"></script>
 
 	</body>
 
