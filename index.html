@@ -33,7 +33,100 @@
 			<!-- =============================================== -->
 			<div>	
 				<form>
-					<!-- ==================== BACKGROUND COLOR ==================== -->
+					
+					<!-- ==================== FONT FAMILY ==================== -->
+					<fieldset id="fontFamily">
+						<legend>Font Family</legend><br/>
+						<span id="css_font_family"></span>
+						<br/><br/>
+						<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
+							<option value = "">-- Choisissez une police d'écriture --</option>
+							<option value = "serif">serif</option>
+							<option value = "sans-serif">sans-serif</option>
+							<option value = "monospace">monospace</option>
+							<option value = "cursive">cursive</option>
+						</select><br/><br/>
+					</fieldset>
+
+					<!-- ==================== FONT SIZE ==================== -->
+					<fieldset id ="fontSize">
+					   <legend>Font Size</legend>
+					   <span id="css_font_size"></span>
+					   <br/><br/>
+					   <div>
+						<input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
+					   </div>
+					</fieldset>
+
+					<!-- ==================== FONT WEIGHT ==================== -->
+					<fieldset>
+						<legend>Font Weight</legend>
+						<span id="css_font_weight"></span>
+						<br/><br/>
+						<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
+							<option value = "">-- Choisissez une épaisseur d'écriture --</option>
+							<option value = "100">100</option>
+							<option value = "200">200</option>
+							<option value = "300">300</option>
+							<option value = "400">400</option>
+							<option value = "500">500</option>
+							<option value = "600">600</option>
+							<option value = "700">700</option>
+							<option value = "800">800</option>
+							<option value = "900">900</option>
+						</select><br/><br/>
+					</fieldset>
+
+					<!-- ==================== FONT COLOR ==================== -->
+					<fieldset>
+						<legend>Font Color</legend>
+						<span id="RGB"></span><br/><br/>
+						<div class ="flex_row">
+							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontOne(this.value)" 
+																							onchange ="setRgbColorFontOne(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontTwo(this.value)" 
+																							onchange ="setRgbColorFontTwo(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontThree(this.value)" 
+																							onchange ="setRgbColorFontThree(this.value)">
+						</div>
+					</fieldset>
+					
+					<!-- ==================== TEXT SHADOW ==================== -->
+					<fieldset>
+						<legend>Text Shadow</legend>
+						<span id="text_shadow"></span>
+						<br/><br/>
+						<div class ="flex_row">
+							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowX(this.value)" 
+								onchange ="setTextShadowX(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowY(this.value)" 
+								onchange ="setTextShadowY(this.value)">
+						</div>
+						<div class ="flex_row">
+							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowBlur(this.value)" 
+								onchange ="setTextShadowBlur(this.value)">
+						</div>
+					</fieldset>
+
+					<!-- ==================== TEXT ALIGN ==================== -->
+					<fieldset>
+						<legend>Text Align</legend>
+						<span id="css_text_align"></span>
+						<br/><br/>
+						<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
+							<option value = "">-- Choisissez un alignement pour le texte --</option>
+							<option value = "left">Left</option>
+							<option value = "center">Center</option>
+							<option value = "right">Right</option>
+							<option value = "justify">Justify</option>
+						</select><br/><br/>
+					</fieldset><!-- ==================== BACKGROUND COLOR ==================== -->
 					<fieldset>
 						<legend>Background Color</legend>
 						<span id="css_background_color"></span>
@@ -127,100 +220,7 @@
 							<div class="val"></div>
 						</div>
 					</div>
-					<!-- ==================== FONT FAMILY ==================== -->
-					<fieldset id="fontFamily">
-						<legend>Font Family</legend><br/>
-						<span id="css_font_family"></span>
-						<br/><br/>
-						<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
-							<option value = "">-- Choisissez une police d'écriture --</option>
-							<option value = "serif">serif</option>
-							<option value = "sans-serif">sans-serif</option>
-							<option value = "monospace">monospace</option>
-							<option value = "cursive">cursive</option>
-						</select><br/><br/>
-					</fieldset>
-
-					<!-- ==================== FONT SIZE ==================== -->
-					<fieldset id ="fontSize">
-					   <legend>Font Size</legend>
-					   <span id="css_font_size"></span>
-					   <br/><br/>
-					   <div>
-						<input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
-					   </div>
-					</fieldset>
-
-					<!-- ==================== FONT WEIGHT ==================== -->
-					<fieldset>
-						<legend>Font Weight</legend>
-						<span id="css_font_weight"></span>
-						<br/><br/>
-						<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
-							<option value = "">-- Choisissez une épaisseur d'écriture --</option>
-							<option value = "100">100</option>
-							<option value = "200">200</option>
-							<option value = "300">300</option>
-							<option value = "400">400</option>
-							<option value = "500">500</option>
-							<option value = "600">600</option>
-							<option value = "700">700</option>
-							<option value = "800">800</option>
-							<option value = "900">900</option>
-						</select><br/><br/>
-					</fieldset>
-
-					<!-- ==================== FONT COLOR ==================== -->
-					<fieldset>
-						<legend>Font Color</legend>
-						<span id="RGB"></span><br/><br/>
-						<div class ="flex_row">
-							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontOne(this.value)" 
-																							onchange ="setRgbColorFontOne(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontTwo(this.value)" 
-																							onchange ="setRgbColorFontTwo(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontThree(this.value)" 
-																							onchange ="setRgbColorFontThree(this.value)">
-						</div>
-					</fieldset>
-					
-					<!-- ==================== TEXT SHADOW ==================== -->
-					<fieldset>
-						<legend>Text Shadow</legend>
-						<span id="text_shadow"></span>
-						<br/><br/>
-						<div class ="flex_row">
-							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowX(this.value)" 
-								onchange ="setTextShadowX(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowY(this.value)" 
-								onchange ="setTextShadowY(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowBlur(this.value)" 
-								onchange ="setTextShadowBlur(this.value)">
-						</div>
-					</fieldset>
-
-					<!-- ==================== TEXT ALIGN ==================== -->
-					<fieldset>
-						<legend>Text Align</legend>
-						<span id="css_text_align"></span>
-						<br/><br/>
-						<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
-							<option value = "">-- Choisissez un alignement pour le texte --</option>
-							<option value = "left">Left</option>
-							<option value = "center">Center</option>
-							<option value = "right">Right</option>
-							<option value = "justify">Justify</option>
-						</select><br/><br/>
-					</fieldset>
-
+					</form>
 			</div>
 			<!-- ======================================= -->
 			<!-- ========== CONTROLEUR VISUEL ========== -->
