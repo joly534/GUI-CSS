@@ -62,7 +62,6 @@ function changeTextShadow(){
 	let text_shadow = document.getElementById('text_shadow');
 	text_shadow.innerHTML = '"' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black"';
 	vue.style.textShadow = '"' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black"';
-	console.log(textShadows);
 }
 /** FIN */
 

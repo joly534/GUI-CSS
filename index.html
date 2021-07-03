@@ -12,227 +12,248 @@
 	</head>
 
 	<body>
+
 		<header>
 			<!-- ============================================== -->
 			<!-- ==================== LOGO ==================== -->
 			<!-- ============================================== -->
 			<h1>CSS VIEWER</h1>
-			<!-- ======================================================= -->
-			<!-- ==================== ZONE DE TEXTE ==================== -->
-			<!-- ======================================================= -->
+			<!-- ================================================================ -->
+			<!-- ==================== ZONE D'ENTREE DE TEXTE ==================== -->
+			<!-- ================================================================ -->
 			<div class="zone_texte">
 				<input id="text" type="text" placeholder="entrez votre texte ici" name="texte">
 				<button onclick='validate()'>Valider</button>
 				<button onclick='resetInput()'>Effacer</button>
 			</div>
 		</header>
-		
-		<div class="section">
-			<!-- =============================================== -->
-			<!-- ==================== MENU ===================== -->
-			<!-- =============================================== -->
-			<div>	
-				<form>
-					
-					<!-- ==================== FONT FAMILY ==================== -->
-					<fieldset id="fontFamily">
-						<legend>Font Family</legend><br/>
-						<span id="css_font_family"></span>
-						<br/><br/>
-						<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
-							<option value = "">-- Choisissez une police d'écriture --</option>
-							<option value = "serif">serif</option>
-							<option value = "sans-serif">sans-serif</option>
-							<option value = "monospace">monospace</option>
-							<option value = "cursive">cursive</option>
-						</select><br/><br/>
-					</fieldset>
 
-					<!-- ==================== FONT SIZE ==================== -->
-					<fieldset id ="fontSize">
-					   <legend>Font Size</legend>
-					   <span id="css_font_size"></span>
-					   <br/><br/>
-					   <div>
-						<input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
-					   </div>
-					</fieldset>
+		<div id="corps">
 
-					<!-- ==================== FONT WEIGHT ==================== -->
-					<fieldset>
-						<legend>Font Weight</legend>
-						<span id="css_font_weight"></span>
-						<br/><br/>
-						<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
-							<option value = "">-- Choisissez une épaisseur d'écriture --</option>
-							<option value = "100">100</option>
-							<option value = "200">200</option>
-							<option value = "300">300</option>
-							<option value = "400">400</option>
-							<option value = "500">500</option>
-							<option value = "600">600</option>
-							<option value = "700">700</option>
-							<option value = "800">800</option>
-							<option value = "900">900</option>
-						</select><br/><br/>
-					</fieldset>
+			<div class="onglets">
+				<!-- =============================================== -->
+				<!-- ==================== MENU ===================== -->
+				<!-- =============================================== -->
+				<div class="flex_row">
+					<span onclick = "javascript:showOngletText();">Texte</span>
+					<span onclick = "javascript:showOngletBorder();">Border</span>
+					<span onclick = "javascript:showOngletBox();">Box</span>
+				</div>
+				<div class="flex_col">
 
-					<!-- ==================== FONT COLOR ==================== -->
-					<fieldset>
-						<legend>Font Color</legend>
-						<span id="RGB"></span><br/><br/>
-						<div class ="flex_row">
-							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontOne(this.value)" 
-																							onchange ="setRgbColorFontOne(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontTwo(this.value)" 
-																							onchange ="setRgbColorFontTwo(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontThree(this.value)" 
-																							onchange ="setRgbColorFontThree(this.value)">
-						</div>
-					</fieldset>
-					
-					<!-- ==================== TEXT SHADOW ==================== -->
-					<fieldset>
-						<legend>Text Shadow</legend>
-						<span id="text_shadow"></span>
-						<br/><br/>
-						<div class ="flex_row">
-							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowX(this.value)" 
-								onchange ="setTextShadowX(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowY(this.value)" 
-								onchange ="setTextShadowY(this.value)">
-						</div>
-						<div class ="flex_row">
-							<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowBlur(this.value)" 
-								onchange ="setTextShadowBlur(this.value)">
-						</div>
-					</fieldset>
+				
+					<div class="contenu_onglet" id="onglet_text">
+						<form>
+							<!-- ==================== FONT FAMILY ==================== -->
+							<fieldset id="fontFamily">
+								<legend>Font Family</legend><br/>
+								<span id="css_font_family"></span>
+								<br/><br/>
+								<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
+									<option value = "">-- Choisissez une police d'écriture --</option>
+									<option value = "serif">serif</option>
+									<option value = "sans-serif">sans-serif</option>
+									<option value = "monospace">monospace</option>
+									<option value = "cursive">cursive</option>
+								</select><br/><br/>
+							</fieldset>
+							<!-- ==================== FONT SIZE ==================== -->
+							<fieldset id ="fontSize">
+								<legend>Font Size</legend>
+								<span id="css_font_size"></span>
+								<br/><br/>
+								<div>
+									<input type ="range" value ="10" max ="100" min ="10" step ="1" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
+								</div>
+							</fieldset>
+							<!-- ==================== FONT WEIGHT ==================== -->
+							<fieldset>
+								<legend>Font Weight</legend>
+								<span id="css_font_weight"></span>
+								<br/><br/>
+								<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
+									<option value = "">-- Choisissez une épaisseur d'écriture --</option>
+									<option value = "100">100</option>
+									<option value = "200">200</option>
+									<option value = "300">300</option>
+									<option value = "400">400</option>
+									<option value = "500">500</option>
+									<option value = "600">600</option>
+									<option value = "700">700</option>
+									<option value = "800">800</option>
+									<option value = "900">900</option>
+								</select><br/><br/>
+							</fieldset>
+							<!-- ==================== FONT COLOR ==================== -->
+							<fieldset>
+								<legend>Font Color</legend>
+								<span id="RGB"></span><br/><br/>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontOne(this.value)" 
+																									onchange ="setRgbColorFontOne(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontTwo(this.value)" 
+																									onchange ="setRgbColorFontTwo(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbColorFontThree(this.value)" 
+																									onchange ="setRgbColorFontThree(this.value)">
+								</div>
+							</fieldset>
+							<!-- ==================== TEXT SHADOW ==================== -->
+							<fieldset>
+								<legend>Text Shadow</legend>
+								<span id="text_shadow"></span>
+								<br/><br/>
+								<div class ="flex_row">
+									<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowX(this.value)" 
+										onchange ="setTextShadowX(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowY(this.value)" 
+										onchange ="setTextShadowY(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="5" max ="20" min ="-20" step ="1" oninput = "setTextShadowBlur(this.value)" 
+										onchange ="setTextShadowBlur(this.value)">
+								</div>
+							</fieldset>
+							<!-- ==================== TEXT ALIGN ==================== -->
+							<fieldset>
+								<legend>Text Align</legend>
+								<span id="css_text_align"></span>
+								<br/><br/>
+								<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
+									<option value = "">-- Choisissez un alignement pour le texte --</option>
+									<option value = "left">Left</option>
+									<option value = "center">Center</option>
+									<option value = "right">Right</option>
+									<option value = "justify">Justify</option>
+								</select><br/><br/>
+							</fieldset>				
 
-					<!-- ==================== TEXT ALIGN ==================== -->
-					<fieldset>
-						<legend>Text Align</legend>
-						<span id="css_text_align"></span>
-						<br/><br/>
-						<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
-							<option value = "">-- Choisissez un alignement pour le texte --</option>
-							<option value = "left">Left</option>
-							<option value = "center">Center</option>
-							<option value = "right">Right</option>
-							<option value = "justify">Justify</option>
-						</select><br/><br/>
-					</fieldset><!-- ==================== BACKGROUND COLOR ==================== -->
-					<fieldset>
-						<legend>Background Color</legend>
-						<span id="css_background_color"></span>
-						<br/><br/>
-							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorOne(this.value)" 
-																								onchange ="setRgbBackgroundColorOne(this.value)">
-							</div>
-							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorTwo(this.value)" 
-																								onchange ="setRgbBackgroundColorTwo(this.value)">
-							</div>
-							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorThree(this.value)" 
-																								onchange ="setRgbBackgroundColorThree(this.value)">
-							</div>
-							<div class ="flex_row">
-								<input type ="range" value ="0" max ="1" min ="0" step ="0.1" oninput = "setRgbBackgroundColorOpacity(this.value)" 
-																								onchange ="setRgbBackgroundColorOpacity(this.value)">
-							</div>
-						</select><br/><br/>
-					</fieldset>
-					<!-- ==================== BORDER TYPE ==================== -->
-					<fieldset>
-						<legend>Border</legend><br/>
-						<span id="css_border_width"></span>
-						<br/><br/>
-						<div class ="flex_row">
-							<input type ="range" value ="0" max ="20" min ="0" step ="1" oninput = "setBorderWidth(this.value)" 
-																							onchange ="setBorderWidth(this.value)">
-						</div><br/>
-						<span id="css_border_style"></span>
-						<br/><br/>
-						<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
-							<option value = "">-- Choisissez un style de bordure --</option>
-							<option value = "none">none</option>
-							<option value = "hidden">hidden</option>
-							<option value = "dotted">dotted</option>
-							<option value = "dashed">dashed</option>
-							<option value = "solid">solid</option>
-							<option value = "double">double</option>
-							<option value = "groove">groove</option>
-							<option value = "ridge">ridge</option>
-							<option value = "inset">inset</option>
-							<option value = "outset">outset</option>
-							<option value = "initial">initial</option>
-							<option value = "inherit">inherit</option>
-						</select><br/><br/>
-						<span id="css_border_color"></span>
-						<br/><br/>
-							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorOne(this.value)" 
-																								onchange ="setBorderColorOne(this.value)">
-							</div>
-							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorTwo(this.value)" 
-																								onchange ="setBorderColorTwo(this.value)">
-							</div>
-							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorThree(this.value)" 
-																								onchange ="setBorderColorThree(this.value)">
-							</div>
-					</fieldset>
-					<!-- ==================== MARGIN ==================== -->
-					<div class="propriete">
-						<div class="entete">
-							<p>margin</p>
-						</div>		
-						<div class="control">
-							<input type="range" name="">
-							<div class="val"></div>
-						</div>
+						</form>
+					</div>	
+
+					<div class="contenu_onglet" id="onglet_border">
+						<form>
+							<!-- ==================== BACKGROUND COLOR ==================== -->
+							<fieldset>
+								<legend>Background Color</legend>
+								<span id="css_background_color"></span>
+								<br/><br/>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorOne(this.value)" 
+																									onchange ="setRgbBackgroundColorOne(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorTwo(this.value)" 
+																									onchange ="setRgbBackgroundColorTwo(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setRgbBackgroundColorThree(this.value)" 
+																									onchange ="setRgbBackgroundColorThree(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="0" max ="1" min ="0" step ="0.1" oninput = "setRgbBackgroundColorOpacity(this.value)" 
+																									onchange ="setRgbBackgroundColorOpacity(this.value)">
+								</div>
+								</select><br/><br/>
+							</fieldset>
+								<!-- ==================== BORDER TYPE ==================== -->
+							<fieldset>
+								<legend>Border</legend><br/>
+								<span id="css_border_width"></span>
+								<br/><br/>
+								<div class ="flex_row">
+									<input type ="range" value ="0" max ="20" min ="0" step ="1" oninput = "setBorderWidth(this.value)" 
+																									onchange ="setBorderWidth(this.value)">
+								</div><br/>
+								<span id="css_border_style"></span>
+								<br/><br/>
+								<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
+									<option value = "">-- Choisissez un style de bordure --</option>
+									<option value = "none">none</option>
+									<option value = "hidden">hidden</option>
+									<option value = "dotted">dotted</option>
+									<option value = "dashed">dashed</option>
+									<option value = "solid">solid</option>
+									<option value = "double">double</option>
+									<option value = "groove">groove</option>
+									<option value = "ridge">ridge</option>
+									<option value = "inset">inset</option>
+									<option value = "outset">outset</option>
+									<option value = "initial">initial</option>
+									<option value = "inherit">inherit</option>
+								</select><br/><br/>
+								<span id="css_border_color"></span>
+								<br/><br/>
+									<div class ="flex_row">
+										<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorOne(this.value)" 
+																										onchange ="setBorderColorOne(this.value)">
+									</div>
+									<div class ="flex_row">
+										<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorTwo(this.value)" 
+																										onchange ="setBorderColorTwo(this.value)">
+									</div>
+									<div class ="flex_row">
+										<input type ="range" value ="125" max ="255" min ="0" step ="1" oninput = "setBorderColorThree(this.value)" 
+																										onchange ="setBorderColorThree(this.value)">
+									</div>
+							</fieldset>
+						</form>
 					</div>
-					<!-- ==================== PADDING ==================== -->
-					<div class="propriete">
-						<div class="entete">
-							<p>padding</p>
-						</div>		
-						<div class="control">
-							<input type="range" name="">
-							<div class="val"></div>
-						</div>
+
+					<div class="contenu_onglet" id="onglet_box">
+						<form>
+							<!-- ==================== MARGIN ==================== -->
+							<div class="propriete">
+								<div class="entete">
+									<p>margin</p>
+								</div>		
+								<div class="control">
+									<input type="range" name="">
+									<div class="val"></div>
+								</div>
+							</div>
+							<!-- ==================== PADDING ==================== -->
+							<div class="propriete">
+								<div class="entete">
+									<p>padding</p>
+								</div>		
+								<div class="control">
+									<input type="range" name="">
+									<div class="val"></div>
+								</div>
+							</div>
+							<!-- ==================== BOX SHADOW ==================== -->			
+							<div class="propriete">
+								<div class="entete">
+									<p>box-shadow</p>
+								</div>	
+								<div class="control">
+									<input type="range" name="">
+									<div class="val"></div>
+								</div>
+							</div>
+						</form>
 					</div>
-					<!-- ==================== BOX SHADOW ==================== -->			
-					<div class="propriete">
-						<div class="entete">
-							<p>box-shadow</p>
-						</div>	
-						<div class="control">
-							<input type="range" name="">
-							<div class="val"></div>
-						</div>
-					</div>
-					</form>
+				</div>
 			</div>
+				
 			<!-- ======================================= -->
 			<!-- ========== CONTROLEUR VISUEL ========== -->
 			<!-- ======================================= -->
 			<div id="zone">
-				<div id="vue" class="visuel"></div>	
-
+				<div id="vue"></div>	
 			</div>
+
 		</div>
 
 		<!-- ==================== JAVASCRIPT ==================== -->
 		<script src="script.js"></script>
+		<script src="functions/functions.js"></script>
 		<script src="functions/textFunctions.js"></script>
 		<script src="functions/boxFunctions.js"></script>
 

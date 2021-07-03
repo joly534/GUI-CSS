@@ -1,5 +1,5 @@
 /************************************************/
-/*******************générales********************/
+/******************* GENERAL ********************/
 /************************************************/
 *{
 	top:0;
@@ -12,102 +12,52 @@ body{
 	height: 100vh;
 }
 
-/*********************************************/
-/*******************HEADER********************/
-/*********************************************/
+/***********************************************/
+/******************* HEADER ********************/
+/***********************************************/
 header, .zone_texte{
 	display: flex;
 	flex-direction: row;
 }
-
-.zone_texte button{
-	padding: 0.1em 0.3em;
-}
-
-header, .section>div{
-	background-color: rgb(25,83,95);
-}
-
-header{
-	height: 4em;
-}
-
+.zone_texte button{	padding: 0.1em 0.3em;}
+header, .onglets{	background-color: rgb(25,83,95);}
+header{	height: 4em;}
 h1{
 	width: 25%;
 	color: aqua;
 	text-align: center;
 	font-size: 2em;
 }
+#text{ width: 30em;}
 
-#text{
-	width: 30em;
-}
 
-.zone_de_texte{
-	justify-content: space-around;
-	width: 100%;
-}
-
-/***********************************************/
-/*******************CORPS***********************/
-/***********************************************/
-.section{
+/*************************************************/
+/******************* CORPS ***********************/
+/*************************************************/
+#corps{
 	display: flex;
 	flex-direction: row;
-	margin-top: 0;
-	height:90%;
+	justify-content: space-between;
+	height: 86.7vh;
 }
-.section>div{
-	width: 25%;
-	display: flex;
-	flex-direction: column;
-	overflow-y: scroll;
-}
-.propriete{
-	width: 100%;
-	height: 4em;
-	color: rgb(215,201,170);
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-}
-.propriete:hover{
-	background-color: rgb(16,25,30);
-	color: aqua;
-}
-.propriete:hover .control{
-	visibility: visible;
-}
-.entete, .control{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	height:2em;
-	line-height: 2em;
-}
-.control{
-	visibility:hidden;
-}
-
-form{
-	color:aqua;
-}
+.onglets{ width: 25%;border: solid 1px black;height: 100%;overflow-y: scroll;}
+.onglets span{ width:33%; color:white; text-align: center;}
+.onglets span:hover{ cursor: pointer; color:black; background-color: aqua;}
+.contenu_onglet{ display: none;}
 
 fieldset{
-	border:6px outset aqua;
+	border: 6px outset aqua;
 	color: lime;
 }
-
 .flex_row{
 	display: flex;
 	flex-direction: row;
-	justify-content:space-between ;
+	justify-content: space-around;
 }
-/*************************************************************/
-/********************* controleur visuel *********************/
-/*************************************************************/
-
+.flex_col{
+	display: flex;
+	flex-direction: column;
+}
 #zone{
 	width: 75%;
 	background: url("images/fond.png") no-repeat;
@@ -117,8 +67,7 @@ fieldset{
 #vue{
 	position: absolute;
 	top: 42%;
-	left: 29%;
-
+	left: 25%;
 }
 input[type="range"]{
 	width: 80%;
