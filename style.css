@@ -20,13 +20,34 @@ header, .zone_texte{
 	flex-direction: row;
 }
 .zone_texte button{	padding: 0.1em 0.3em;}
-header, .onglets{	background-color: rgb(25,83,95);}
+header, .onglets{	background-color: #EFEBCE
+	;}
 header{	height: 4em;}
+h1, h2 {
+	color: #19535F;
+
+}
+h3{
+	color: #EFEBCE;
+	background-color: #19535F;
+	padding: 10px;
+	border-radius: 10px;
+}
 h1{
 	width: 25%;
-	color: aqua;
 	text-align: center;
 	font-size: 2em;
+}
+h2{
+	padding: 0.5em 1em;
+}
+h2:hover, h2:focus{
+	background-color: #151E3F;
+	color: aqua;
+	border-radius: 5px;
+}
+h2:focus{
+
 }
 #text{ width: 30em;}
 
@@ -38,16 +59,34 @@ h1{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 86.7vh;
 }
-.onglets{ width: 25%;border: solid 1px black;height: 100%;overflow-y: scroll;}
-.onglets span{ width:33%; color:white; text-align: center;}
-.onglets span:hover{ cursor: pointer; color:black; background-color: aqua;}
+.onglets{ width: 25%;}
+.onglets span{ 
+	text-align: center;
+	}
 .contenu_onglet{ display: none;}
+#onglet_text, #onglet_border, #onglet_box{
+	height: 86.7vh;
+	overflow-y: auto;
+}
 
 fieldset{
-	border: 6px outset aqua;
-	color: lime;
+	border: 3px outset aqua !important;
+	background-color: #19535F;
+	box-shadow: 0px 0px 5px 2px black;
+	margin-top: -1em;
+	margin-bottom: 0.2em;
+	padding: 0;
+}
+
+.slider{
+	opacity: 0.5;
+	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+	transition: opacity .2s;
+}
+.slider:hover{
+	opacity: 1;
+	cursor: pointer;
 }
 .flex_row{
 	display: flex;
@@ -64,20 +103,22 @@ fieldset{
 	background-size: cover;
 	position: relative;
 }
-#vue{
-	position: absolute;
-	top: 42%;
-	left: 25%;
-}
+
 input[type="range"]{
 	width: 80%;
 	color: aqua;
 }
 input[type="range"]:before{
-	margin-left: -1em;
+	margin-left: -1.5em;
    content: attr(min);
 }
 input[type="range"]:after{
 	margin-right: -2em;
     content: attr(max);
+}
+#onglet_box{
+	width: 100%;
+}
+#onglet_box .flex_col{
+	width: 25%;
 }
