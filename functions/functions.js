@@ -4,6 +4,7 @@ let ongletBorder = document.getElementById('onglet_border');
 let ongletBox = document.getElementById('onglet_box');
 let titleOngletText = document.getElementById('ongletText');
 
+
 ongletText.style.display = "block";
 
 function showOngletText(){
