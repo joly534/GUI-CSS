@@ -9,10 +9,10 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
-	<body class="flex_row">
+	<body class="flexrow">
 		
 		<!-- ==================== CONTENU DE GAUCHE ==================== -->
-		<div id="left_part" class="flex_col">
+		<div id="left_part" class="flexcol">
 					
 			<h1>CSS VIEWER</h1>
 
@@ -20,7 +20,7 @@
 			<!-- ==================== ZONE D'ENTREE DE TEXTE ==================== -->
 			<!-- ================================================================ -->
 			<div class="zone_texte">
-				<input id="text" type="text" placeholder="entrez votre texte ici" name="texte">
+				<textarea id="text" name="texte" type="text" placeholder="Votre texte ici / Your text here"></textarea>
 				<div>
 					<button onclick='validate()'>Valider</button>
 					<button onclick='resetInput()'>Effacer</button>
@@ -31,264 +31,284 @@
 		</div>
 
 		<!-- ==================== CONTENU DE DROITE ==================== -->
-		<div id="right_part" class="flex_col">
+		<div id="right_part" class="flexcol">
 
 			<!-- ==================== SECTION POUR LES CONTROLES ==================== -->
-			<header class="flex_col">
+			<header class="flexcol">
 
-				<!-- ==================== MENU ONGLETS  PRINCIPAUX ===================== -->
-				<div id="onglets_h2" class="flex_row">
-					<h2><span onclick = "javascript:showOngletText();" class="focus_onglet" id="ongletText">Texte</span></h2>
-					<h2><span onclick = "javascript:showOngletBorder();" class="focus_onglet" id="ongletText">Border</span></h2>
-					<h2><span onclick = "javascript:showOngletBox();" class="focus_onglet" id="ongletText">Box</span></h2>
-				</div>
-				
-				<!-- ==================== ONGLET TEXTE ===================== -->
-				<div class="contenu_onglet_h2" id="onglet_text">
-	
+				<div>
+					<!-- ==================== MENU ONGLETS  PRINCIPAUX ===================== -->
+					<div id="onglets_h2" class="flexrow">
+						<h2><span onclick = "javascript:showOngletText();" class="focus_onglet" id="ongletText">Texte</span></h2>
+						<h2><span onclick = "javascript:showOngletBorder();" class="focus_onglet" id="ongletText">Border</span></h2>
+						<h2><span onclick = "javascript:showOngletBox();" class="focus_onglet" id="ongletText">Box</span></h2>
+					</div>
+					
+					<!-- ==================== ONGLET TEXTE ===================== -->
+					<div class="contenu_onglets_h2" id="onglet_text">
+		
 						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
-						<div id="onglet_h3" class="flex_row" cla>
-							<h3><span onclick = "javascript:showOngletFontFamily();" class="focus_onglet" id="ongletText">Font Family</span></h3>
-							<h3><span onclick = "javascript:showOngletFontsize();" class="focus_onglet" id="ongletText">Font Size</span></h3>
-							<h3><span onclick = "javascript:showOngletFontWeight();" class="focus_onglet" id="ongletText">Font Weight</span></h3>
-							<h3><span onclick = "javascript:showOngletFontColor();" class="focus_onglet" id="ongletText">Font Color</span></h3>
+						<div id="onglets_h3" class="flexrow" >
+							<h3><span onclick = "javascript:showOngletFontFamily();" class="focus_onglet" id="ongletFontFamily">Font Family</span></h3>
+							<h3><span onclick = "javascript:showOngletFontSize();" class="focus_onglet" id="ongletFontSize">Font Size</span></h3>
+							<h3><span onclick = "javascript:showOngletFontWeight();" class="focus_onglet" id="ongletFontWeight">Font Weight</span></h3>
+							<h3><span onclick = "javascript:showOngletFontColor();" class="focus_onglet" id="ongletFontColor">Font Color</span></h3>
 							<h3><span onclick = "javascript:showOngletTextShadow();" class="focus_onglet" id="ongletText">Text Shadow</span></h3>
 							<h3><span onclick = "javascript:showOngletTextAlign();" class="focus_onglet" id="ongletText">Text Align</span></h3>
 						</div>
-	
-						<!-- ==================== CONTENU DES ONGLETS SECONDAIRES ==================== -->
-						<div id="contenu_onglet_h3" class="flex_row">		
-	
-							<!-- ==================== FONT FAMILY ==================== -->
-							<fieldset id="contenu_font_family">
-								<span id="css_font_family"></span>
-								<br/><br/>
-								<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
-									<option value = "">-- Choisissez une police d'écriture --</option>
-									<option value = "serif">serif</option>
-									<option value = "sans-serif">sans-serif</option>
-									<option value = "monospace">monospace</option>
-									<option value = "cursive">cursive</option>
-								</select><br/><br/>
-							</fieldset>
-	
-							<!-- ==================== FONT SIZE ==================== -->
-							<fieldset id="contenu_font_size">
-								<span id="css_font_size"></span>
-								<br/><br/>
-								<div>
-									<input type ="range" value ="10" max ="100" min ="10" step ="1" class="slider" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
-								</div>
-							</fieldset>
-	
-							<!-- ==================== FONT WEIGHT ==================== -->
-							<fieldset id="contenu_font_weight">
-								<span id="css_font_weight"></span>
-								<br/><br/>
-								<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
-									<option value = "">-- Choisissez une épaisseur d'écriture --</option>
-									<option value = "100">100</option>
-									<option value = "200">200</option>
-									<option value = "300">300</option>
-									<option value = "400">400</option>
-									<option value = "500">500</option>
-									<option value = "600">600</option>
-									<option value = "700">700</option>
-									<option value = "800">800</option>
-									<option value = "900">900</option>
-								</select><br/><br/>
-							</fieldset>
-	
-							<!-- ==================== FONT COLOR ==================== -->
-							<fieldset id="contenu_font_color">
-								<span id="RGB"></span><br/><br/>
-								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontOne(this.value)" 
-																									onchange ="setRgbColorFontOne(this.value)">
-								</div>
-								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontTwo(this.value)" 
-																									onchange ="setRgbColorFontTwo(this.value)">
-								</div>
-								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontThree(this.value)" 
-																									onchange ="setRgbColorFontThree(this.value)">
-								</div>
-							</fieldset>
-	
-							<!-- ==================== TEXT SHADOW ==================== -->
-							<fieldset id="contenu_text_shadow">
-								<span id="text_shadow"></span>
-								<br/><br/>
-								<div class ="flex_row">
-									<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowX(this.value)" 
-										onchange ="setTextShadowX(this.value)">
-								</div>
-								<div class ="flex_row">
-									<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowY(this.value)" 
-										onchange ="setTextShadowY(this.value)">
-								</div>
-								<div class ="flex_row">
-									<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowBlur(this.value)" 
-										onchange ="setTextShadowBlur(this.value)">
-								</div>
-							</fieldset>
-	
-							<!-- ==================== TEXT ALIGN ==================== -->
-							<fieldset id="contenu_text_align">
-							<span id="css_text_align"></span>
+		
+						<!-- ==================== FONT FAMILY ==================== -->
+						<fieldset id="onglet_font_family" class="onglets_text">
+							<span id="css_font_family"></span>
 							<br/><br/>
-							<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
-								<option value = "">-- Choisissez un alignement pour le texte --</option>
-								<option value = "left">Left</option>
-								<option value = "center">Center</option>
-								<option value = "right">Right</option>
-								<option value = "justify">Justify</option>
+							<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
+								<option value = "">-- Choisissez une police d'écriture --</option>
+								<option value = "serif">serif</option>
+								<option value = "sans-serif">sans-serif</option>
+								<option value = "monospace">monospace</option>
+								<option value = "cursive">cursive</option>
 							</select><br/><br/>
-							</fieldset>		
+						</fieldset>
+		
+						<!-- ==================== FONT SIZE ==================== -->
+						<fieldset id="onglet_font_size" class="onglets_text">
+							<span id="css_font_size"></span>
+							<br/><br/>
+							<div>
+								<input type ="range" value ="10" max ="25" min ="10" step ="1" class="slider" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
+							</div>
+						</fieldset>
+		
+						<!-- ==================== FONT WEIGHT ==================== -->
+						<fieldset id="onglet_font_weight" class="onglets_text">
+							<span id="css_font_weight"></span>
+							<br/><br/>
+							<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
+								<option value = "">-- Choisissez une épaisseur d'écriture --</option>
+								<option value = "100">100</option>
+								<option value = "200">200</option>
+								<option value = "300">300</option>
+								<option value = "400">400</option>
+								<option value = "500">500</option>
+								<option value = "600">600</option>
+								<option value = "700">700</option>
+								<option value = "800">800</option>
+								<option value = "900">900</option>
+							</select><br/><br/>
+						</fieldset>
+		
+						<!-- ==================== FONT COLOR ==================== -->
+						<fieldset id="onglet_font_color" class="onglets_text">
+							<span id="RGB"></span><br/><br/>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontOne(this.value)" 
+																								onchange ="setRgbColorFontOne(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontTwo(this.value)" 
+																								onchange ="setRgbColorFontTwo(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontThree(this.value)" 
+																								onchange ="setRgbColorFontThree(this.value)">
+							</div>
+						</fieldset>
+		
+						<!-- ==================== TEXT SHADOW ==================== -->
+						<fieldset id="onglet_text_shadow" class="onglets_text">
+							<span id="text_shadow"></span>
+							<br/><br/>
+							<div class ="flex_row">
+								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowX(this.value)" 
+									onchange ="setTextShadowX(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowY(this.value)" 
+									onchange ="setTextShadowY(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowBlur(this.value)" 
+									onchange ="setTextShadowBlur(this.value)">
+							</div>
+						</fieldset>
+		
+						<!-- ==================== TEXT ALIGN ==================== -->
+						<fieldset id="onglet_text_align" class="onglets_text">
+						<span id="css_text_align"></span>
+						<br/><br/>
+						<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
+							<option value = "">-- Choisissez un alignement pour le texte --</option>
+							<option value = "left">Left</option>
+							<option value = "center">Center</option>
+							<option value = "right">Right</option>
+							<option value = "justify">Justify</option>
+						</select><br/><br/>
+						</fieldset>		
+							
+					</div>	
+			
+					<!-- ==================== ONGLET BORDER ===================== -->
+					<div class="contenu_onglets_h2" id="onglet_border">
 	
-						</div>	
+						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
+						<div id="onglets_h3" class="flexrow" >
+							<h3><span onclick = "javascript:showOngletBackgroundColor();" class="focus_onglet" id="ongletBackgroundColor">Background Color</span></h3>
+							<h3><span onclick = "javascript:showOngletBorder();" class="focus_onglet" id="ongletBorder">Border</span></h3>
+							<h3><span onclick = "javascript:showOngletBorderWidth();" class="focus_onglet" id="ongletBorderWidth">Border Width</span></h3>
+							<h3><span onclick = "javascript:showOngletBorderColor();" class="focus_onglet" id="ongletBorderWidth">Border Color</span></h3>
+						</div>
+							<!-- ==================== BACKGROUND COLOR ==================== -->
+							<fieldset>
+								<span id="css_background_color"></span>
+								<br/><br/>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
+																									onchange ="setRgbBackgroundColorOne(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorTwo(this.value)" 
+																									onchange ="setRgbBackgroundColorTwo(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorThree(this.value)" 
+																									onchange ="setRgbBackgroundColorThree(this.value)">
+								</div>
+								<div class ="flex_row">
+									<input type ="range" value ="0" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
+																									onchange ="setRgbBackgroundColorOpacity(this.value)">
+								</div>
+								</select><br/><br/>
+							</fieldset>
+							<!-- ==================== BORDER TYPE ==================== -->
+							<fieldset>
+								<span id="css_border_style"></span>
+								<br/><br/>
+								<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
+									<option value = "">-- Choisissez un style de bordure --</option>
+									<option value = "none">none</option>
+									<option value = "hidden">hidden</option>
+									<option value = "dotted">dotted</option>
+									<option value = "dashed">dashed</option>
+									<option value = "solid">solid</option>
+									<option value = "double">double</option>
+									<option value = "groove">groove</option>
+									<option value = "ridge">ridge</option>
+									<option value = "inset">inset</option>
+									<option value = "outset">outset</option>
+									<option value = "initial">initial</option>
+									<option value = "inherit">inherit</option>
+								</select><br/><br/>
+							</fieldset>
+							<!-- ==================== BORDER WIDTH ==================== -->
+							<fieldset>
+								<span id="css_border_width"></span>
+								<br/><br/>
+								<div class ="flex_row">
+									<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setBorderWidth(this.value)" 
+																									onchange ="setBorderWidth(this.value)">
+								</div><br/>
+							</fieldset>
+							<!-- ==================== BORDER COLOR ==================== -->
+							<fieldset>
+								<span id="css_border_color"></span>
+								<br/><br/>
+									<div class ="flex_row">
+										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
+																										onchange ="setBorderColorOne(this.value)">
+									</div>
+									<div class ="flex_row">
+										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorTwo(this.value)" 
+																										onchange ="setBorderColorTwo(this.value)">
+									</div>
+									<div class ="flex_row">
+										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorThree(this.value)" 
+																										onchange ="setBorderColorThree(this.value)">
+									</div>
+							</fieldset>
+					</div>
+			
+					<!-- ==================== ONGLET BOX ===================== -->
+					<div class="contenu_onglets_h2" id="onglet_box">
 						
-				</div>	
-		
-				<!-- ==================== ONGLET BORDER ===================== -->
-				<div class="contenu_onglet_h2" id="onglet_border">
-							<form>
-								<!-- ==================== BACKGROUND COLOR ==================== -->
-								<fieldset>
-									<legend>Background Color</legend>
-									<span id="css_background_color"></span>
-									<br/><br/>
-									<div class ="flex_row">
-										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
-																										onchange ="setRgbBackgroundColorOne(this.value)">
-									</div>
-									<div class ="flex_row">
-										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorTwo(this.value)" 
-																										onchange ="setRgbBackgroundColorTwo(this.value)">
-									</div>
-									<div class ="flex_row">
-										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorThree(this.value)" 
-																										onchange ="setRgbBackgroundColorThree(this.value)">
-									</div>
-									<div class ="flex_row">
-										<input type ="range" value ="0" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
-																										onchange ="setRgbBackgroundColorOpacity(this.value)">
-									</div>
-									</select><br/><br/>
-								</fieldset>
-									<!-- ==================== BORDER TYPE ==================== -->
-								<fieldset>
-									<legend>Border</legend><br/>
-									<span id="css_border_style"></span>
-									<br/><br/>
-									<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
-										<option value = "">-- Choisissez un style de bordure --</option>
-										<option value = "none">none</option>
-										<option value = "hidden">hidden</option>
-										<option value = "dotted">dotted</option>
-										<option value = "dashed">dashed</option>
-										<option value = "solid">solid</option>
-										<option value = "double">double</option>
-										<option value = "groove">groove</option>
-										<option value = "ridge">ridge</option>
-										<option value = "inset">inset</option>
-										<option value = "outset">outset</option>
-										<option value = "initial">initial</option>
-										<option value = "inherit">inherit</option>
-									</select><br/><br/>
-									<span id="css_border_width"></span>
-									<br/><br/>
-									<div class ="flex_row">
-										<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setBorderWidth(this.value)" 
-																										onchange ="setBorderWidth(this.value)">
-									</div><br/>
-									<span id="css_border_color"></span>
-									<br/><br/>
-										<div class ="flex_row">
-											<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
-																											onchange ="setBorderColorOne(this.value)">
-										</div>
-										<div class ="flex_row">
-											<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorTwo(this.value)" 
-																											onchange ="setBorderColorTwo(this.value)">
-										</div>
-										<div class ="flex_row">
-											<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorThree(this.value)" 
-																											onchange ="setBorderColorThree(this.value)">
-										</div>
-								</fieldset>
-							</form>
-				</div>
-		
-				<!-- ==================== ONGLET BOX ===================== -->
-				<div class="contenu_onglet_h2" id="onglet_box">
-							<form>
-								<fieldset>
-									<!-- ==================== MARGIN ==================== -->
-									<legend><h3>Margin</h3></legend>
-									<span id="css_margin"></span>
-									<br/><br/>
-									<div class="flex_row">
-										<div class="flex_col">
-											<span>HAUT</span>
-											<input type="text" name="" id="">
-										</div>
-										<div class="flex_col">
-											<span>DROITE</span>
-											<input type="text" name="" id="">
-										</div>
-										<div class="flex_col">
-											<span>BAS</span>
-											<input type="text" name="" id="">
-										</div>
-										<div class="flex_col">
-											<span>GAUCHE</span>
-											<input type="text" name="" id="">
-										</div>
-									</div>
-								</fieldset>
-		
-								<fieldset>
-									<!-- ==================== PADDING ==================== -->
-									<legend><h3>padding</h3></legend>
-									<span id="css_padding"></span>
-									<br/><br/>
-									<div class="flex_row">
-										<div class="flex_col">
-											<span>HAUT</span>
-											<input type="text" name="" id="">
-										</div>
-										<div class="flex_col">
-											<span>DROITE</span>
-											<input type="text" name="" id="">
-										</div>
-										<div class="flex_col">
-											<span>BAS</span>
-											<input type="text" name="" id="">
-										</div>
-										<div class="flex_col">
-											<span>GAUCHE</span>
-											<input type="text" name="" id="">
-										</div>
-									</div>
-								</fieldset>
-		
-								<fieldset>
-									<!-- ==================== BOX SHADOW ==================== -->	
-									<legend><h3>Box-shadow</h3></legend>
-									<span id="css_box_shadow"></span>
-									<br/><br/>
-								</fieldset>
-							</form>
-				</div>
+						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
+						<div id="onglets_h3" class="flexrow" >
+							<h3><span onclick = "javascript:showOngletMargin();" class="focus_onglet" id="ongletMargin">Margin</span></h3>
+							<h3><span onclick = "javascript:showOngletPadding();" class="focus_onglet" id="ongletPadding">Padding</span></h3>
+							<h3><span onclick = "javascript:showOngletBoxShadow();" class="focus_onglet" id="ongletBoxShadow">Box Shadow</span></h3>
+						</div>
+						<!-- ==================== MARGIN ==================== -->
+						<fieldset>
+							<span id="css_margin"></span>
+							<br/><br/>
+							<div class="flex_row">
+								<div class="flex_col">
+									<span>HAUT</span>
+									<input type="text" name="" id="">
+								</div>
+								<div class="flex_col">
+									<span>DROITE</span>
+									<input type="text" name="" id="">
+								</div>
+								<div class="flex_col">
+									<span>BAS</span>
+									<input type="text" name="" id="">
+								</div>
+								<div class="flex_col">
+									<span>GAUCHE</span>
+									<input type="text" name="" id="">
+								</div>
+							</div>
+						</fieldset>
+			
+						<!-- ==================== PADDING ==================== -->
+						<fieldset>
+							<span id="css_padding"></span>
+							<br/><br/>
+							<div class="flex_row">
+								<div class="flex_col">
+									<span>HAUT</span>
+									<input type="text" name="" id="">
+								</div>
+								<div class="flex_col">
+									<span>DROITE</span>
+									<input type="text" name="" id="">
+								</div>
+								<div class="flex_col">
+									<span>BAS</span>
+									<input type="text" name="" id="">
+								</div>
+								<div class="flex_col">
+									<span>GAUCHE</span>
+									<input type="text" name="" id="">
+								</div>
+							</div>
+						</fieldset>
+			
+						<!-- ==================== BOX SHADOW ==================== -->
+						<fieldset>	
+							<span id="css_box_shadow"></span>
+							<br/><br/>
+						</fieldset>
 
+					</div>
+
+				</div>
+			
 			</header>
 
-			<!-- ==================== ZONE DE PREVISUALISATION ===================== -->
-			<div id="zone">
-				<div id="vue"></div>	
-			</div>
+			<div id="visuel" class="flexrow">
+				<!-- ==================== ZONE DE PREVISUALISATION ===================== -->
+				<div id="zone">
+					<div id="vue"></div>	
+				</div>
+				<!--===================== ZONE DU CODE CSS ====================-->
+				<div id="codeCSS">
+					<h2>CODE CSS</h2>
+					<div id="pureCSS"></div>
+				</div>
+			</div>	
+
+
 
 		</div>
 

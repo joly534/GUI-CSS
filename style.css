@@ -6,39 +6,118 @@ Travaillez votre code CSS visuellement !!!
 Work your CSS code visually !!!
 **/
 
+
 /******************* GENERAL ********************/
-* {margin: 0;padding: 0;box-sizing: content-box;border:1px solid red;}
-body{background-color:#EFEBCE;}
-.flex_row {display: flex; flex-direction: row; justify-content: space-around;}
-.flex_col {display: flex; flex-direction: column;}
+* {margin: 0;padding: 0;box-sizing: content-box;}
+body{background-color:#EFEBCE;width: 98.5vw;height: 98vh;}
+.flexrow {display: flex; flex-direction: row;}
+.flexcol {display: flex; flex-direction: column;}
+
 
 /******************* SIDEBAR #LEFT_PART ***********************/
-#left_part {width:20%; left:0; padding: 25px;}
+#left_part {
+	width:25%;
+	height:97%;
+	padding: 11px;
+	background-color: #19535F;
+	box-shadow: 2px 0px 10px black;
+	z-index: 9999;
+}
 h1, .zone_texte {text-align: center;}
-.zone_texte *{margin: 35px 0;}
-.zone_text input{width: 100%;height: 500px;}
+.zone_texte {
+	margin: 100px 0px;
+	border: 6px outset #EFEBCE;
+	height: 70%;
+	padding: 5px;
+	box-shadow: 0px 0px 5px 2px black;
+	background-color: #0B7A75;
+}
+#text{width: 85%;height: 70%;margin:1em auto 2em auto;border: 5px outset grey;padding: 10px;}
+
 
 /******************* #RIGHT_PART ***********************/
-#right_part { width:80%; right:0;}
+#right_part { width:85%;}
+
 
 /******************* MENU ********************/
-header{width:100%;height:270px;top:0;overflow:hidden;}
-h1, h2 {color: #19535F;}
-h2:hover {background-color: #151E3F; color: aqua; border-radius: 5px;}
-h3 {color: #EFEBCE; background-color: #19535F; padding: 10px; border-radius: 10px;}
-
-/******************* CORPS ***********************/
-#onglet_h2, #onglet_h3{width: 100%;}
-#contenu_onglet_h2,  #contenu_onglet_h3{width:100%;display: none;}
-fieldset{
-	border: 3px outset aqua !important;
+header{
+	width: 100%;
+	top:0;
+	padding:10px;
+	overflow:hidden;
+	background-color: #EFEBCE;
+}
+header>div{
+	width: 97%;
 	background-color: #19535F;
-	box-shadow: 0px 0px 15px 3px black;
+	margin: 0 auto 1em auto;
+	padding: 10px;
+	box-shadow: 0px 0px 5px 3px black;}
+h1, h2 { color:#EFEBCE;}
+h2{font-size: 1rem; margin: 5px 30px 5px 5px;padding: 5px 10px;}
+h2:hover{background-color: #151E3F;}
+h3 {
+	font-size:0.9rem;
+	color: #EFEBCE; 
+	background-color: #19535F;
+	margin: 0px 2px; 
+	padding: 5px 10px;
+	border-top: 0.5px solid black;
+	border-right: 0.5px solid black;
+	border-left: 0.5px solid black;
+}
+h3:hover {background-color: #EFEBCE;color:#19535F;} 
+#onglets_h2, #onglets_h3{cursor: pointer;}
+#onglets_h2{background-color: #0B7A75;}
+.contenu_onglets_h2,  .contenu_onglets_h3{display:none;}
+.contenu_onglets_h2{background-color: #0B7A75; padding:  0px 5px 5px 5px;}
+fieldset{
+	border: 5px outset #19535F!important;
+	background-color: #0B7A75;
+	box-shadow: 0px 0px 10px #EFEBCE;
 	padding: 0px 30px;
 }
+.onglets_text{display: none;height: 5em;}
 
 /******************* ESPACE DE PREVISUALISATION ***********************/
-#zone {background: url("images/fond.png") no-repeat; background-size: cover;}
+#visuel{
+	width: 100%;
+	height:75%;
+	padding: 10px;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#zone {
+	width:70%;
+	height:95%;
+	background:url("images/fond.png") no-repeat;
+	background-size: cover;
+	word-wrap:break-word;
+	border: 2px solid green;
+}
+#codeCSS{
+	width:27.5%;
+	height:95%;
+	background-color: #0B7A75;
+	border: 6px outset #EFEBCE;
+	box-shadow: 0px 0px 5px 2px black;
+}
+#codeCSS h2{
+	width: 93%;
+	text-align: center;
+	font-size: 1.5rem;
+	margin: 0 auto;
+	background-color: #19535F;
+	box-shadow: 0px 3px 5px black;
+}
+#pureCSS{
+	width: 91%;
+	height: 75%;
+	margin: 30px auto;
+	background-color: white;
+	border: 5px outset grey;
+}
 
 /******************* MODIFICATION CSS DES INPUTS ***********************/
 .slider {opacity: 0.5; -webkit-transition: .2s; transition: opacity .5s;}

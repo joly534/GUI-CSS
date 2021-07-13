@@ -1,3 +1,74 @@
+let ongletFontFamily = document.getElementById('onglet_font_family');
+let ongletFontSize = document.getElementById('onglet_font_size');
+let ongletFontWeight = document.getElementById('onglet_font_weight');
+let ongletFontColor = document.getElementById('onglet_font_color');
+let ongletTextShadow = document.getElementById('onglet_text_shadow');
+let ongletTextAlign = document.getElementById('onglet_text_align');
+
+
+ongletFontFamily.style.display = "block";
+
+function showOngletFontFamily(){
+	ongletFontFamily.style.display = "block";
+	ongletFontSize.style.display = "none";
+	ongletFontWeight.style.display = "none";
+	ongletFontColor.style.display = "none";
+	ongletTextShadow.style.display = "none";
+	ongletTextAlign.style.display = "none";
+}
+
+function showOngletFontSize(){
+	ongletFontFamily.style.display = "none";
+	ongletFontSize.style.display = "block";
+	ongletFontWeight.style.display = "none";
+	ongletFontColor.style.display = "none";
+	ongletTextShadow.style.display = "none";
+	ongletTextAlign.style.display = "none";
+}
+
+function showOngletFontWeight(){
+	ongletFontFamily.style.display = "none";
+	ongletFontSize.style.display = "none";
+	ongletFontWeight.style.display = "block";
+	ongletFontColor.style.display = "none";
+	ongletTextShadow.style.display = "none";
+	ongletTextAlign.style.display = "none";
+}
+
+function showOngletFontColor(){
+	ongletFontFamily.style.display = "none";
+	ongletFontSize.style.display = "none";
+	ongletFontWeight.style.display = "none";
+	ongletFontColor.style.display = "block";
+	ongletTextShadow.style.display = "none";
+	ongletTextAlign.style.display = "none";
+}
+
+function showOngletTextShadow(){
+	ongletFontFamily.style.display = "none";
+	ongletFontSize.style.display = "none";
+	ongletFontWeight.style.display = "none";
+	ongletFontColor.style.display = "none";
+	ongletTextShadow.style.display = "block";
+	ongletTextAlign.style.display = "none";
+}
+
+function showOngletTextAlign(){
+	ongletFontFamily.style.display = "none";
+	ongletFontSize.style.display = "none";
+	ongletFontWeight.style.display = "none";
+	ongletFontColor.style.display = "none";
+	ongletTextShadow.style.display = "none";
+	ongletTextAlign.style.display = "block";
+}
+
+
+
+
+
+
+
+
 //** FONCTION DE LA POLICE D'ECRITURE */
 function setFontFamily(valueFamilyFont){
 	fontFamily.splice(0,1,valueFamilyFont);
