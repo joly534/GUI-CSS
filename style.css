@@ -17,7 +17,6 @@ body{background-color:#EFEBCE;width: 98.5vw;height: 98vh;}
 /******************* SIDEBAR #LEFT_PART ***********************/
 #left_part {
 	width:25%;
-	height:97%;
 	padding: 11px;
 	background-color: #19535F;
 	box-shadow: 2px 0px 10px black;
@@ -25,15 +24,17 @@ body{background-color:#EFEBCE;width: 98.5vw;height: 98vh;}
 }
 h1, .zone_texte {text-align: center;}
 .zone_texte {
-	margin: 100px 0px;
+	margin: 50px 0px;
 	border: 6px outset #EFEBCE;
-	height: 70%;
+	height: 100%;
 	padding: 5px;
 	box-shadow: 0px 0px 5px 2px black;
 	background-color: #0B7A75;
 }
-#text{width: 85%;height: 70%;margin:1em auto 2em auto;border: 5px outset grey;padding: 10px;}
-
+#text{width: 85%;height: 60%;margin:1em auto 1em auto;border: 5px outset grey;padding: 10px;}
+input[type='text']{width:90%;padding:5px;background-color:white;margin-bottom:0.5em;border: 5px outset grey;}
+button{padding: 5px 11px;margin: 10px 5px;}
+button:hover{border: 5px outset grey;margin: 5px 0px;}
 
 /******************* #RIGHT_PART ***********************/
 #right_part { width:85%;}
