@@ -20,12 +20,12 @@
 			<!-- ==================== ZONE D'ENTREE DE TEXTE ==================== -->
 			<!-- ================================================================ -->
 			<div class="zone_texte">
-				<textarea id="text" name="texte" type="text" placeholder="Votre texte ici / Your text here"></textarea>
-				<input type="text" name="id" id="" placeholder = "Saisissez un ID (facultatif)">
-				<input type="text" name="class" id="" placeholder="Saisissez une classe (facultatif)">
+				<textarea id ="text" name ="texte" type ="text" placeholder = "Votre texte ici / Your text here"></textarea>
+				<input type = "text" name ="id" id ="identification" placeholder = "Saisissez un ID (facultatif)">
+				<input type = "text" name ="classe" id ="classe" placeholder = "Saisissez une classe (facultatif)">
 				<div>
-					<button onclick='validate()'>Valider</button>
-					<button onclick='resetInput()'>Effacer</button>
+					<button onclick = 'validate()'>Valider</button>
+					<button onclick = 'resetInput()'>Effacer</button>
 
 				</div>
 			</div>
@@ -307,6 +307,7 @@
 				<div id="codeCSS">
 					<h2>CODE CSS</h2>
 					<div id="pureCSS"></div>
+					<button onclick="copy()">Copier/Copy</button>
 				</div>
 			</div>	
 
@@ -317,6 +318,7 @@
 		<!-- ==================== JAVASCRIPT ==================== -->
 		<script src="script.js"></script>
 		<script src="functions/functions.js"></script>
+		<script src="functions/css.js"></script>
 		<script src="functions/textFunctions.js"></script>
 		<script src="functions/onglets.js"></script>
 		<script src="functions/borderFunctions.js"></script>

@@ -114,10 +114,15 @@ fieldset{
 }
 #pureCSS{
 	width: 91%;
-	height: 75%;
-	margin: 30px auto;
+	height: 65%;
+	margin: 30px auto 15px;
+	padding: 5px;
+	overflow: auto;
 	background-color: white;
 	border: 5px outset grey;
+}
+#codeCSS button{
+	margin: 0 33%;
 }
 
 /******************* MODIFICATION CSS DES INPUTS ***********************/
