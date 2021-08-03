@@ -1,22 +1,16 @@
-let ongletBackgroundColor = document.getElementById('onglet_background_color');
+
 let ongletBorderStyle = document.getElementById('onglet_border_style');
 let ongletBorderWidth = document.getElementById('onglet_border_width');
 let ongletBorderColor = document.getElementById('onglet_border_color');
 
 
-ongletBackgroundColor.style.display = "block";
+
 ongletBorderStyle.style.display = "none";
 ongletBorderWidth.style.display = "none";
 ongletBorderColor.style.display = "none";
 
-function showOngletBackgroundColor(){
-	ongletBackgroundColor.style.display = "block";
-	ongletBorderStyle.style.display = "none";
-	ongletBorderWidth.style.display = "none";
-	ongletBorderColor.style.display = "none";
-}
 
-function showOngletBorder(){
+function showOngletBorderStyle(){
 	ongletBackgroundColor.style.display = "none";
 	ongletBorderStyle.style.display = "block";
 	ongletBorderWidth.style.display = "none";
@@ -55,7 +49,7 @@ function setRgbBackgroundColorOpacity(valueBackgroundColorThree){
 }
 
 function changeBackgroundColor(){
-	let bc = css.innerHTML = "background-color : rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ");";
+	css.innerHTML = "background-color : rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ");";
 	
 	vue.style.backgroundColor ="rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ")";
 }

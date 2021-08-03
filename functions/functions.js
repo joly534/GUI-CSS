@@ -5,7 +5,8 @@ let ongletBox = document.getElementById('onglet_box');
 
 ongletText.style.display = "block";
 
-function showOngletText(){    
+function showOngletText(){  
+    console.log('ok text');  
     ongletText.style.display = "block";    
     ongletBorder.style.display = "none";
     ongletBox.style.display = "none";
@@ -18,7 +19,8 @@ function showOngletBorder(){
     ongletBox.style.display = "none";
 }
 
-function showOngletBox(){    
+function showOngletBox(){
+    console.log('ok box');    
     ongletText.style.display = "none";
     ongletBorder.style.display = "none";
     ongletBox.style.display = "block";

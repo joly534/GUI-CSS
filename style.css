@@ -6,13 +6,11 @@ Travaillez votre code CSS visuellement !!!
 Work your CSS code visually !!!
 **/
 
-
 /******************* GENERAL ********************/
 * {margin: 0;padding: 0;box-sizing: content-box;}
 body{background-color:#EFEBCE;width: 98.5vw;height: 98vh;}
 .flexrow {display: flex; flex-direction: row;}
 .flexcol {display: flex; flex-direction: column;}
-
 
 /******************* SIDEBAR #LEFT_PART ***********************/
 #left_part {
@@ -32,13 +30,11 @@ h1, .zone_texte {text-align: center;}
 	background-color: #0B7A75;
 }
 #text{width: 85%;height: 60%;margin:1em auto 1em auto;border: 5px outset grey;padding: 10px;}
-input[type='text']{width:50px;padding:5px;background-color:white;margin-bottom:0.5em;}
 button{padding: 5px 11px;margin: 10px 5px;}
 button:hover{border: 5px outset grey;margin: 5px 0px;}
 
 /******************* #RIGHT_PART ***********************/
 #right_part { width:85%;}
-
 
 /******************* MENU ********************/
 header{
@@ -56,7 +52,7 @@ header>div{
 	padding: 10px;
 	box-shadow: 0px 0px 5px 3px black;}
 h1, h2 { color:#EFEBCE;}
-h2{font-size: 1rem; margin: 5px 30px 5px 5px; padding: 5px 10px;}
+h2{font-size: 1rem; margin: 5px 30px 5px 5px; padding: 5px 10px;text-transform: uppercase;}
 h2:hover{background-color: #151E3F;}
 h3 {
 	font-size:0.9rem;
@@ -71,15 +67,16 @@ h3 {
 h3:hover {background-color: #EFEBCE;color:#19535F;} 
 #onglets_h2, #onglets_h3{cursor: pointer;}
 #onglets_h2{background-color: #0B7A75;}
+#onglets_h3{margin: 1em 0;}
 .contenu_onglets_h2, .contenu_onglets_h3{display:none;}
-.contenu_onglets_h2{background-color: #0B7A75; padding:  0px 5px 5px 5px;}
+.contenu_onglets_h2{background-color: #0B7A75; padding:  0px 5px 5px 5px;height: 10em;}
 fieldset{
 	border: 5px outset #EFEBCE!important;
 	background-color: #0B7A75;
 	box-shadow: 0px 0px 10px #EFEBCE;
 	padding: 0px 30px;
 }
-.onglets_text{display: none;height: 5.5em;}
+.onglets_text, .onglet_border, .onglet_box{display: none;height: 6em;}
 
 /******************* ESPACE DE PREVISUALISATION ***********************/
 #visuel{
@@ -133,3 +130,4 @@ fieldset{
 input[type="range"] {color: aqua;}
 input[type="range"]:before {margin-left: -1.5em; content: attr(min);}
 input[type="range"]:after {margin-right: -2em; content: attr(max);}
+input[type='text']{width:250px;padding:5px;background-color:white;margin-bottom:0.5em;}

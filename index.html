@@ -149,75 +149,53 @@
 	
 						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
 						<div id="onglets_h3" class="flexrow" >
-							<h3><span onclick = "showOngletBackgroundColor();" class="focus_onglet" id="ongletbackgroundColor">Background Color</span></h3>
-							<h3><span onclick = "showOngletBorder();" class="focus_onglet" id="ongletborder">Border</span></h3>
+							<h3><span onclick = "showOngletBorderStyle();" class="focus_onglet" id="ongletBorderStyle">Border</span></h3>
 							<h3><span onclick = "showOngletBorderWidth();" class="focus_onglet" id="ongletborderWidth">Border Width</span></h3>
 							<h3><span onclick = "showOngletBorderColor();" class="focus_onglet" id="ongletborderWidth">Border Color</span></h3>
 						</div>
-							<!-- ==================== BACKGROUND COLOR ==================== -->
-							<fieldset id='onglet_background_color'>
-								<br/>
+						<!-- ==================== BORDER TYPE ==================== -->
+						<fieldset id='onglet_border_style' class="onglet_border">
+							<br/>
+							<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
+								<option value = "">-- Choisissez un style de bordure --</option>
+								<option value = "none">none</option>
+								<option value = "hidden">hidden</option>
+								<option value = "dotted">dotted</option>
+								<option value = "dashed">dashed</option>
+								<option value = "solid">solid</option>
+								<option value = "double">double</option>
+								<option value = "groove">groove</option>
+								<option value = "ridge">ridge</option>
+								<option value = "inset">inset</option>
+								<option value = "outset">outset</option>
+								<option value = "initial">initial</option>
+								<option value = "inherit">inherit</option>
+							</select><br/><br/>
+						</fieldset>
+						<!-- ==================== BORDER WIDTH ==================== -->
+						<fieldset id='onglet_border_width' class="onglet_border">
+							<br/>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setBorderWidth(this.value)" 
+																								onchange ="setBorderWidth(this.value)">
+							</div><br/>
+						</fieldset>
+						<!-- ==================== BORDER COLOR ==================== -->
+						<fieldset id='onglet_border_color' class="onglet_border">
+							<br/>
 								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
-																									onchange ="setRgbBackgroundColorOne(this.value)">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
+																									onchange ="setBorderColorOne(this.value)">
 								</div>
 								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorTwo(this.value)" 
-																									onchange ="setRgbBackgroundColorTwo(this.value)">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorTwo(this.value)" 
+																									onchange ="setBorderColorTwo(this.value)">
 								</div>
 								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorThree(this.value)" 
-																									onchange ="setRgbBackgroundColorThree(this.value)">
+									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorThree(this.value)" 
+																									onchange ="setBorderColorThree(this.value)">
 								</div>
-								<div class ="flex_row">
-									<input type ="range" value ="0" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
-																									onchange ="setRgbBackgroundColorOpacity(this.value)">      (opacité/opacity)
-								</div>
-								</select><br/><br/>
-							</fieldset>
-							<!-- ==================== BORDER TYPE ==================== -->
-							<fieldset id='onglet_border_style'>
-								<br/>
-								<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
-									<option value = "">-- Choisissez un style de bordure --</option>
-									<option value = "none">none</option>
-									<option value = "hidden">hidden</option>
-									<option value = "dotted">dotted</option>
-									<option value = "dashed">dashed</option>
-									<option value = "solid">solid</option>
-									<option value = "double">double</option>
-									<option value = "groove">groove</option>
-									<option value = "ridge">ridge</option>
-									<option value = "inset">inset</option>
-									<option value = "outset">outset</option>
-									<option value = "initial">initial</option>
-									<option value = "inherit">inherit</option>
-								</select><br/><br/>
-							</fieldset>
-							<!-- ==================== BORDER WIDTH ==================== -->
-							<fieldset id='onglet_border_width'>
-								<br/>
-								<div class ="flex_row">
-									<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setBorderWidth(this.value)" 
-																									onchange ="setBorderWidth(this.value)">
-								</div><br/>
-							</fieldset>
-							<!-- ==================== BORDER COLOR ==================== -->
-							<fieldset id='onglet_border_color'>
-								<br/>
-									<div class ="flex_row">
-										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
-																										onchange ="setBorderColorOne(this.value)">
-									</div>
-									<div class ="flex_row">
-										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorTwo(this.value)" 
-																										onchange ="setBorderColorTwo(this.value)">
-									</div>
-									<div class ="flex_row">
-										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorThree(this.value)" 
-																										onchange ="setBorderColorThree(this.value)">
-									</div>
-							</fieldset>
+						</fieldset>
 					</div>
 			
 					<!-- ==================== ONGLET BOX ===================== -->
@@ -225,12 +203,36 @@
 						
 						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
 						<div id="onglets_h3" class="flexrow" >
+							<h3><span onclick = "showOngletBackgroundColor();" class="focus_onglet" id="ongletBackgroundColor">Background Color</span></h3>
 							<h3><span onclick = "showOngletBoxMargin();" class="focus_onglet" id="ongletMargin">Margin</span></h3>
 							<h3><span onclick = "showOngletBoxPadding();" class="focus_onglet" id="ongletPadding">Padding</span></h3>
 							<h3><span onclick = "showOngletBoxShadow();" class="focus_onglet" id="ongletBoxShadow">Box Shadow</span></h3>
 						</div>
+
+						<!-- ==================== BACKGROUND COLOR ==================== -->
+						<fieldset id='onglet_background_color' class="onglet_box">
+							<br/>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
+																								onchange ="setRgbBackgroundColorOne(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorTwo(this.value)" 
+																								onchange ="setRgbBackgroundColorTwo(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorThree(this.value)" 
+																								onchange ="setRgbBackgroundColorThree(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
+																								onchange ="setRgbBackgroundColorOpacity(this.value)">      (opacité/opacity)
+							</div>
+							</select><br/><br/>
+						</fieldset>
+
 						<!-- ==================== MARGIN ==================== -->
-						<fieldset id="onglet_box_margin">
+						<fieldset id="onglet_box_margin" class="onglet_box">
 							<br/>
 							<div class="flex_row">
 								<div>
@@ -247,7 +249,7 @@
 						</fieldset>
 			
 						<!-- ==================== PADDING ==================== -->
-						<fieldset id="onglet_box_padding">
+						<fieldset id="onglet_box_padding" class="onglet_box">
 							<br/>
 							<div class="flex_row">
 								<div>
@@ -264,7 +266,7 @@
 						</fieldset>
 			
 						<!-- ==================== BOX SHADOW ==================== -->
-						<fieldset id="onglet_box_shadow">	
+						<fieldset id="onglet_box_shadow" class="onglet_box">	
 							<br/>
 						</fieldset>
 
