@@ -5,55 +5,29 @@ let ongletBorderColor = document.getElementById('onglet_border_color');
 
 
 
-ongletBorderStyle.style.display = "none";
+ongletBorderStyle.style.display = "block";
 ongletBorderWidth.style.display = "none";
 ongletBorderColor.style.display = "none";
 
 
 function showOngletBorderStyle(){
-	ongletBackgroundColor.style.display = "none";
 	ongletBorderStyle.style.display = "block";
 	ongletBorderWidth.style.display = "none";
 	ongletBorderColor.style.display = "none";
 }
 
 function showOngletBorderWidth(){
-	ongletBackgroundColor.style.display = "none";
 	ongletBorderStyle.style.display = "none";
 	ongletBorderWidth.style.display = "block";
 	ongletBorderColor.style.display = "none";
 }
 
 function showOngletBorderColor(){
-	ongletBackgroundColor.style.display = "none";
 	ongletBorderStyle.style.display = "none";
 	ongletBorderWidth.style.display = "none";
 	ongletBorderColor.style.display = "block";
 }
 
-/** FONCTIONS DE PARAMETRAGE DU BACKGROUND COLOR */
-function setRgbBackgroundColorOne(valueBackgroundColorOne){
-	backgroundColors.splice(0,1,valueBackgroundColorOne);
-}
-
-function setRgbBackgroundColorTwo(valueBackgroundColorTwo){
-	backgroundColors.splice(1,1,valueBackgroundColorTwo);
-}
-
-function setRgbBackgroundColorThree(valueBackgroundColorThree){
-	backgroundColors.splice(2,1,valueBackgroundColorThree);
-}
-
-function setRgbBackgroundColorOpacity(valueBackgroundColorThree){
-	backgroundColors.splice(3,1,valueBackgroundColorThree);
-}
-
-function changeBackgroundColor(){
-	css.innerHTML = "background-color : rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ");";
-	
-	vue.style.backgroundColor ="rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ")";
-}
-/** FIN */
 
 /** FONCTIONS DE PARAMETRAGE DU BORDER */
 function setBorderWidth(valueBorderWidth){
