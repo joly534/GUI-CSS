@@ -5,7 +5,6 @@ let ongletFontColor = document.getElementById('onglet_font_color');
 let ongletTextShadow = document.getElementById('onglet_text_shadow');
 let ongletTextAlign = document.getElementById('onglet_text_align');
 
-
 ongletFontFamily.style.display = "block";
 
 function showOngletFontFamily(){
@@ -68,7 +67,7 @@ function setFontFamily(valueFamilyFont){
 }
 function changeFontFamily(){
 	let ff = css.innerHTML = 'font-family: ' + fontFamily[0] + ';';
-	addCSS(fontFamily[0],ff, 0, 1);
+	addCSS(ff, 0, 1);
 	vue.style.fontFamily = fontFamily[0];
 }
 /** FIN */
@@ -79,7 +78,7 @@ function setFontSize(valueSizeFont){
 }
 function changeFontSize(){
 	let fs = css.innerHTML = 'font-size : ' + fontSize[0] +  'px;';
-	addCSS(fontSize[0], fs,1,1);
+	addCSS(fs,1,1);
 	vue.style.fontSize = fontSize[0] + 'px';
 }
 /** FIN */
@@ -90,7 +89,7 @@ function setFontWeight(valueWeightFont){
 }
 function changeFontWeight(){
 	let fw = css.innerHTML = "font-weight : " + weight[0] + ';';
-	addCSS(weight[0],fw,2,1);
+	addCSS(fw,2,1);
 	vue.style.fontWeight = weight[0];
 }
 /** FIN */
@@ -106,7 +105,8 @@ function setRgbColorFontThree(valueColorFont){
 	fontRgbcolors.splice(2,1,valueColorFont);	
 }
 function changeFontRgbColor(){
-	css.innerHTML = "color : rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ");";
+	let fc = css.innerHTML = "font-color : rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ");";
+	addCSSMultiple(fc, 3, 1);
 	vue.style.color ="rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ")";
 }
 /** FIN */
@@ -122,7 +122,8 @@ function setTextShadowBlur(valueShadowBlur){
 	textShadows.splice(2,1,valueShadowBlur);
 }
 function changeTextShadow(){
-	css.innerHTML = '"' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black"';
+	let ts = css.innerHTML = 'text-shadow : ' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black;';
+	addCSSMultiple(ts, 4, 1);
 	vue.style.textShadow = '"' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black"';
 }
 /** FIN */
@@ -132,7 +133,8 @@ function setTextAlign(valueTextAlign){
 	alignement.splice(0,1,valueTextAlign);
 }
 function changeTextAlign(){
-	css.innerHTML = "text-align : " + alignement[0] + ';';
+	let ta = css.innerHTML = "text-align : " + alignement[0] + ';';
+	addCSS (ta, 5, 1);
 	vue.style.textAlign = alignement[0]
 }
 

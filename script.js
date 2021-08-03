@@ -8,7 +8,7 @@ let fontSize = [];
 let weight = [];
 let alignement = [];
 let border = [];
-let fontRgbcolors = ["125","125","125"];
+let fontRgbcolors = ["0","0","0"];
 let backgroundColors = ["255" , "255" , "255"];
 let textShadows = ["5","5","5"];
 let css = document.getElementById('pureCSS');
@@ -26,10 +26,12 @@ function resetInput(){
 	classe.value = '';
 }
 
-function addCSS(condition,value, index, number){
-	if(condition != undefined){
+function addCSS(value, index, number){
 		codeCSS.splice(index, number, value);
-	}
+}
+
+function addCSSMultiple(value, index, number){
+	codeCSS.splice(index, number, value);
 }
 
 function update() {
@@ -42,9 +44,9 @@ function update() {
 	changeBackgroundColor();
 	changeBorderWidth();
 	changeBorderStyle();
-	changeBorderColor();
-	
+	changeBorderColor();	
 	showCss();
+	
 window.requestAnimationFrame(update);
 }
 

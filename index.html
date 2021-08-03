@@ -41,9 +41,9 @@
 				<div>
 					<!-- ==================== MENU ONGLETS  PRINCIPAUX ===================== -->
 					<div id="onglets_h2" class="flexrow">
-						<h2><span onclick = "javascript:showOngletText();" class="focus_onglet" id="ongletText">Texte</span></h2>
-						<h2><span onclick = "javascript:showOngletBorder();" class="focus_onglet" id="ongletText">Border</span></h2>
-						<h2><span onclick = "javascript:showOngletBox();" class="focus_onglet" id="ongletText">Box</span></h2>
+						<h2><span onclick = "showOngletText();" class="focus_onglet" id="ongletText">Texte</span></h2>
+						<h2><span onclick = "showOngletBorder();" class="focus_onglet" id="ongletBorder">Border</span></h2>
+						<h2><span onclick = "showOngletBox();" class="focus_onglet" id="ongletBox">Box</span></h2>
 					</div>
 					
 					<!-- ==================== ONGLET TEXTE ===================== -->
@@ -51,18 +51,17 @@
 		
 						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
 						<div id="onglets_h3" class="flexrow" >
-							<h3><span onclick = "javascript:showOngletFontFamily();" class="focus_onglet" id="ongletFontFamily">Font Family</span></h3>
-							<h3><span onclick = "javascript:showOngletFontSize();" class="focus_onglet" id="ongletFontSize">Font Size</span></h3>
-							<h3><span onclick = "javascript:showOngletFontWeight();" class="focus_onglet" id="ongletFontWeight">Font Weight</span></h3>
-							<h3><span onclick = "javascript:showOngletFontColor();" class="focus_onglet" id="ongletFontColor">Font Color</span></h3>
-							<h3><span onclick = "javascript:showOngletTextShadow();" class="focus_onglet" id="ongletText">Text Shadow</span></h3>
-							<h3><span onclick = "javascript:showOngletTextAlign();" class="focus_onglet" id="ongletText">Text Align</span></h3>
+							<h3><span onclick = "showOngletFontFamily();" class="focus_onglet" id="ongletFontFamily">Font Family</span></h3>
+							<h3><span onclick = "showOngletFontSize();" class="focus_onglet" id="ongletFontSize">Font Size</span></h3>
+							<h3><span onclick = "showOngletFontWeight();" class="focus_onglet" id="ongletFontWeight">Font Weight</span></h3>
+							<h3><span onclick = "showOngletFontColor();" class="focus_onglet" id="ongletFontColor">Font Color</span></h3>
+							<h3><span onclick = "showOngletTextShadow();" class="focus_onglet" id="ongletText">Text Shadow</span></h3>
+							<h3><span onclick = "showOngletTextAlign();" class="focus_onglet" id="ongletText">Text Align</span></h3>
 						</div>
 		
 						<!-- ==================== FONT FAMILY ==================== -->
 						<fieldset id="onglet_font_family" class="onglets_text">
-							<span id="css_font_family"></span>
-							<br/><br/>
+							<br/>
 							<select name ="fontFamily" oninput ="setFontFamily(this.value)" onchange ="setFontFamily(this.value)">
 								<option value = "">-- Choisissez une police d'écriture --</option>
 								<option value = "serif">serif</option>
@@ -74,17 +73,15 @@
 		
 						<!-- ==================== FONT SIZE ==================== -->
 						<fieldset id="onglet_font_size" class="onglets_text">
-							<span id="css_font_size"></span>
-							<br/><br/>
+							<br/>
 							<div>
-								<input type ="range" value ="10" max ="25" min ="10" step ="1" class="slider" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
+								<input type ="range" value ="10" max ="55" min ="10" step ="1" class="slider" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
 							</div>
 						</fieldset>
 		
 						<!-- ==================== FONT WEIGHT ==================== -->
 						<fieldset id="onglet_font_weight" class="onglets_text">
-							<span id="css_font_weight"></span>
-							<br/><br/>
+							<br/>
 							<select name ="fontWeight" oninput ="setFontWeight(this.value)" onchange ="setFontWeight(this.value)">
 								<option value = "">-- Choisissez une épaisseur d'écriture --</option>
 								<option value = "100">100</option>
@@ -101,25 +98,24 @@
 		
 						<!-- ==================== FONT COLOR ==================== -->
 						<fieldset id="onglet_font_color" class="onglets_text">
-							<span id="RGB"></span><br/><br/>
+							<br/>
 							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontOne(this.value)" 
+								<input type ="range" value ="0" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontOne(this.value)" 
 																								onchange ="setRgbColorFontOne(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontTwo(this.value)" 
+								<input type ="range" value ="0" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontTwo(this.value)" 
 																								onchange ="setRgbColorFontTwo(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontThree(this.value)" 
+								<input type ="range" value ="0" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbColorFontThree(this.value)" 
 																								onchange ="setRgbColorFontThree(this.value)">
 							</div>
 						</fieldset>
 		
 						<!-- ==================== TEXT SHADOW ==================== -->
 						<fieldset id="onglet_text_shadow" class="onglets_text">
-							<span id="text_shadow"></span>
-							<br/><br/>
+							<br/>
 							<div class ="flex_row">
 								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowX(this.value)" 
 									onchange ="setTextShadowX(this.value)">
@@ -136,8 +132,7 @@
 		
 						<!-- ==================== TEXT ALIGN ==================== -->
 						<fieldset id="onglet_text_align" class="onglets_text">
-						<span id="css_text_align"></span>
-						<br/><br/>
+						<br/>
 						<select name ="fontWeight" oninput ="setTextAlign(this.value)" onchange ="setTextAlign(this.value)">
 							<option value = "">-- Choisissez un alignement pour le texte --</option>
 							<option value = "left">Left</option>
@@ -154,15 +149,14 @@
 	
 						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
 						<div id="onglets_h3" class="flexrow" >
-							<h3><span onclick = "javascript:showOngletBackgroundColor();" class="focus_onglet" id="ongletBackgroundColor">Background Color</span></h3>
-							<h3><span onclick = "javascript:showOngletBorder();" class="focus_onglet" id="ongletBorder">Border</span></h3>
-							<h3><span onclick = "javascript:showOngletBorderWidth();" class="focus_onglet" id="ongletBorderWidth">Border Width</span></h3>
-							<h3><span onclick = "javascript:showOngletBorderColor();" class="focus_onglet" id="ongletBorderWidth">Border Color</span></h3>
+							<h3><span onclick = "showOngletBackgroundColor();" class="focus_onglet" id="ongletbackgroundColor">Background Color</span></h3>
+							<h3><span onclick = "showOngletBorder();" class="focus_onglet" id="ongletborder">Border</span></h3>
+							<h3><span onclick = "showOngletBorderWidth();" class="focus_onglet" id="ongletborderWidth">Border Width</span></h3>
+							<h3><span onclick = "showOngletBorderColor();" class="focus_onglet" id="ongletborderWidth">Border Color</span></h3>
 						</div>
 							<!-- ==================== BACKGROUND COLOR ==================== -->
-							<fieldset>
-								<span id="css_background_color"></span>
-								<br/><br/>
+							<fieldset id='onglet_background_color'>
+								<br/>
 								<div class ="flex_row">
 									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
 																									onchange ="setRgbBackgroundColorOne(this.value)">
@@ -177,14 +171,13 @@
 								</div>
 								<div class ="flex_row">
 									<input type ="range" value ="0" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
-																									onchange ="setRgbBackgroundColorOpacity(this.value)">
+																									onchange ="setRgbBackgroundColorOpacity(this.value)">      (opacité/opacity)
 								</div>
 								</select><br/><br/>
 							</fieldset>
 							<!-- ==================== BORDER TYPE ==================== -->
-							<fieldset>
-								<span id="css_border_style"></span>
-								<br/><br/>
+							<fieldset id='onglet_border_style'>
+								<br/>
 								<select name ="border" oninput ="setBorderStyle(this.value)" onchange ="setBorderStyle(this.value)">
 									<option value = "">-- Choisissez un style de bordure --</option>
 									<option value = "none">none</option>
@@ -202,18 +195,16 @@
 								</select><br/><br/>
 							</fieldset>
 							<!-- ==================== BORDER WIDTH ==================== -->
-							<fieldset>
-								<span id="css_border_width"></span>
-								<br/><br/>
+							<fieldset id='onglet_border_width'>
+								<br/>
 								<div class ="flex_row">
 									<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setBorderWidth(this.value)" 
 																									onchange ="setBorderWidth(this.value)">
 								</div><br/>
 							</fieldset>
 							<!-- ==================== BORDER COLOR ==================== -->
-							<fieldset>
-								<span id="css_border_color"></span>
-								<br/><br/>
+							<fieldset id='onglet_border_color'>
+								<br/>
 									<div class ="flex_row">
 										<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
 																										onchange ="setBorderColorOne(this.value)">
@@ -234,28 +225,21 @@
 						
 						<!-- ==================== MENU ONGLETS SECONDAIRES ==================== -->
 						<div id="onglets_h3" class="flexrow" >
-							<h3><span onclick = "javascript:showOngletMargin();" class="focus_onglet" id="ongletMargin">Margin</span></h3>
-							<h3><span onclick = "javascript:showOngletPadding();" class="focus_onglet" id="ongletPadding">Padding</span></h3>
-							<h3><span onclick = "javascript:showOngletBoxShadow();" class="focus_onglet" id="ongletBoxShadow">Box Shadow</span></h3>
+							<h3><span onclick = "showOngletBoxMargin();" class="focus_onglet" id="ongletMargin">Margin</span></h3>
+							<h3><span onclick = "showOngletBoxPadding();" class="focus_onglet" id="ongletPadding">Padding</span></h3>
+							<h3><span onclick = "showOngletBoxShadow();" class="focus_onglet" id="ongletBoxShadow">Box Shadow</span></h3>
 						</div>
 						<!-- ==================== MARGIN ==================== -->
-						<fieldset>
-							<span id="css_margin"></span>
-							<br/><br/>
+						<fieldset id="onglet_box_margin">
+							<br/>
 							<div class="flex_row">
-								<div class="flex_col">
+								<div>
 									<span>HAUT</span>
 									<input type="text" name="" id="">
-								</div>
-								<div class="flex_col">
 									<span>DROITE</span>
 									<input type="text" name="" id="">
-								</div>
-								<div class="flex_col">
 									<span>BAS</span>
 									<input type="text" name="" id="">
-								</div>
-								<div class="flex_col">
 									<span>GAUCHE</span>
 									<input type="text" name="" id="">
 								</div>
@@ -263,23 +247,16 @@
 						</fieldset>
 			
 						<!-- ==================== PADDING ==================== -->
-						<fieldset>
-							<span id="css_padding"></span>
-							<br/><br/>
+						<fieldset id="onglet_box_padding">
+							<br/>
 							<div class="flex_row">
-								<div class="flex_col">
+								<div>
 									<span>HAUT</span>
 									<input type="text" name="" id="">
-								</div>
-								<div class="flex_col">
 									<span>DROITE</span>
 									<input type="text" name="" id="">
-								</div>
-								<div class="flex_col">
 									<span>BAS</span>
 									<input type="text" name="" id="">
-								</div>
-								<div class="flex_col">
 									<span>GAUCHE</span>
 									<input type="text" name="" id="">
 								</div>
@@ -287,9 +264,8 @@
 						</fieldset>
 			
 						<!-- ==================== BOX SHADOW ==================== -->
-						<fieldset>	
-							<span id="css_box_shadow"></span>
-							<br/><br/>
+						<fieldset id="onglet_box_shadow">	
+							<br/>
 						</fieldset>
 
 					</div>
@@ -319,8 +295,8 @@
 		<script src="script.js"></script>
 		<script src="functions/functions.js"></script>
 		<script src="functions/css.js"></script>
-		<script src="functions/textFunctions.js"></script>
 		<script src="functions/onglets.js"></script>
+		<script src="functions/textFunctions.js"></script>
 		<script src="functions/borderFunctions.js"></script>
 		<script src="functions/boxFunctions.js"></script>
 
