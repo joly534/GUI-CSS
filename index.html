@@ -118,17 +118,36 @@
 						<fieldset id="onglet_text_shadow" class="onglets_text">
 							<br/>
 							<div class ="flex_row">
-								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowX(this.value)" 
+								<input type ="range" value ="0" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowX(this.value)" 
 									onchange ="setTextShadowX(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowY(this.value)" 
+								<input type ="range" value ="0" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowY(this.value)" 
 									onchange ="setTextShadowY(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="5" max ="20" min ="-20" step ="1" class="slider" oninput = "setTextShadowBlur(this.value)" 
+								<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setTextShadowBlur(this.value)" 
 									onchange ="setTextShadowBlur(this.value)">
 							</div>
+							<select name ="colorTextShadow" oninput ="setColorTextShadow(this.value)" onchange ="setColorTextShadow(this.value)">
+								<option value = "">-- Choisissez une couleur --</option>
+								<option value = "aqua">Aqua</option>
+								<option value = "black">Black</option>
+								<option value = "blue">Blue</option>
+								<option value = "Fuchsia">Fuchsia</option>
+								<option value = "gray">Gray</option>
+								<option value = "green">Green</option>
+								<option value = "lime">Lime</option>
+								<option value = "maroon">Maroon</option>
+								<option value = "navy">Navy</option>
+								<option value = "olive">Olive</option>
+								<option value = "purple">Purple</option>
+								<option value = "red">Red</option>
+								<option value = "silver">Silver</option>
+								<option value = "teal">Teal</option>
+								<option value = "white">White</option>
+								<option value = "yellow">Yellow</option>
+							</select><br/><br/>
 						</fieldset>
 		
 						<!-- ==================== TEXT ALIGN ==================== -->

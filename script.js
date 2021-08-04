@@ -10,7 +10,7 @@ let alignement = [];
 let border = [];
 let fontRgbcolors = ["0","0","0"];
 let backgroundColors = ["255" , "255" , "255"];
-let textShadows = ["5","5","5"];
+let textShadows = ["0","0","0","black"];
 let css = document.getElementById('pureCSS');
 let codeCSS = [];
 

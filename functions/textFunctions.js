@@ -77,7 +77,7 @@ function setFontSize(valueSizeFont){
     fontSize.splice(0,1,valueSizeFont);
 }
 function changeFontSize(){
-	let fs = css.innerHTML = 'font-size : ' + fontSize[0] +  'px;';
+	let fs = css.innerHTML = 'font-size: ' + fontSize[0] +  'px;';
 	addCSS(fs,1,1);
 	vue.style.fontSize = fontSize[0] + 'px';
 }
@@ -88,7 +88,7 @@ function setFontWeight(valueWeightFont){
 	weight.splice(0,1,valueWeightFont);
 }
 function changeFontWeight(){
-	let fw = css.innerHTML = "font-weight : " + weight[0] + ';';
+	let fw = css.innerHTML = "font-weight: " + weight[0] + ';';
 	addCSS(fw,2,1);
 	vue.style.fontWeight = weight[0];
 }
@@ -105,7 +105,7 @@ function setRgbColorFontThree(valueColorFont){
 	fontRgbcolors.splice(2,1,valueColorFont);	
 }
 function changeFontRgbColor(){
-	let fc = css.innerHTML = "font-color : rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ");";
+	let fc = css.innerHTML = "font-color: rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ");";
 	addCSSMultiple(fc, 3, 1);
 	vue.style.color ="rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ")";
 }
@@ -121,10 +121,13 @@ function setTextShadowY(valueShadowY){
 function setTextShadowBlur(valueShadowBlur){
 	textShadows.splice(2,1,valueShadowBlur);
 }
+function setColorTextShadow(valueColorTextShadow){
+	textShadows.splice(3,1,valueColorTextShadow)
+}
 function changeTextShadow(){
-	let ts = css.innerHTML = 'text-shadow : ' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black;';
+	let ts = css.innerHTML = 'text-shadow: ' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3] + ';';
 	addCSSMultiple(ts, 4, 1);
-	vue.style.textShadow = '"' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px black"';
+	vue.style.textShadow = + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3];
 }
 /** FIN */
 
@@ -133,7 +136,7 @@ function setTextAlign(valueTextAlign){
 	alignement.splice(0,1,valueTextAlign);
 }
 function changeTextAlign(){
-	let ta = css.innerHTML = "text-align : " + alignement[0] + ';';
+	let ta = css.innerHTML = "text-align: " + alignement[0] + ';';
 	addCSS (ta, 5, 1);
 	vue.style.textAlign = alignement[0]
 }
