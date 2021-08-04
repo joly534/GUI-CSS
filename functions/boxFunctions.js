@@ -28,26 +28,22 @@ function showOngletBoxShadow(){
 }
 
 
-/** FONCTIONS DE PARAMETRAGE DU BACKGROUND COLOR */
+/** BACKGROUND COLOR */
 function setRgbBackgroundColorOne(valueBackgroundColorOne){
 	backgroundColors.splice(0,1,valueBackgroundColorOne);
 }
-
 function setRgbBackgroundColorTwo(valueBackgroundColorTwo){
 	backgroundColors.splice(1,1,valueBackgroundColorTwo);
 }
-
 function setRgbBackgroundColorThree(valueBackgroundColorThree){
 	backgroundColors.splice(2,1,valueBackgroundColorThree);
 }
-
 function setRgbBackgroundColorOpacity(valueBackgroundColorThree){
 	backgroundColors.splice(3,1,valueBackgroundColorThree);
 }
-
 function changeBackgroundColor(){
-	css.innerHTML = "background-color : rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ");";
-	
+	let backcol = css.innerHTML = "background-color : rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ");";
+	addCSSMultiple(backcol,9,1);
 	vue.style.backgroundColor ="rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," + backgroundColors[3] + ")";
 }
 /** FIN */

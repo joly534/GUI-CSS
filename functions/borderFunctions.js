@@ -29,15 +29,29 @@ function showOngletBorderColor(){
 }
 
 
-/** FONCTIONS DE PARAMETRAGE DU BORDER */
-function setBorderWidth(valueBorderWidth){
-	border.splice(0,1,valueBorderWidth);
-}
 
+/** BORDER STYLE */
 function setBorderStyle(valueBorderStyle){
     border.splice(1,1,valueBorderStyle);
 }
+function changeBorderStyle(){
+    let bs = css.innerHTML = 'border-style : ' + border[1] + ';';
+	addCSS(bs,6,1);
+    vue.style.borderStyle = border[1];
+}
 
+/** BORDER WIDTH */
+function setBorderWidth(valueBorderWidth){
+	border.splice(0,1,valueBorderWidth);
+}
+function changeBorderWidth(){
+    let bw = css.innerHTML = 'border-width : ' + border[0] + 'px;';
+	addCSS(bw,7,1);
+    vue.style.borderWidth = '"' + border[0] + 'px"';
+}
+/** FIN */
+
+/** BORDER COLOR */
 function setBorderColorOne(valueborderColorOne){
     border.splice(2,1,valueborderColorOne);
 }
@@ -49,19 +63,11 @@ function setBorderColorTwo(valueborderColorTwo){
 function setBorderColorThree(valueborderColorThree){
     border.splice(4,1,valueborderColorThree);    
 }
-
-function changeBorderWidth(){
-    css.innerHTML = 'border-width : ' + border[0] + 'px;';
-    vue.style.borderWidth = '"' + border[0] + 'px"';
-}
-
-function changeBorderStyle(){
-    css.innerHTML = 'border-style : ' + border[1] + ';';
-    vue.style.borderStyle = border[1];
-}
-
 function changeBorderColor(){
-	css.innerHTML = "border-color : rgb(" + border[2] + "," + border[3] + "," + border[4] + ");";
+	let bc = css.innerHTML = "border-color : rgb(" + border[2] + "," + border[3] + "," + border[4] + ");";
+	addCSSMultiple(bc,8,1);
 	vue.style.borderColor ="rgb(" + border[2] + "," + border[3] + "," + border[4] + ")";
 }
 /** FIN */
+
+

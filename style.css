@@ -80,7 +80,7 @@ fieldset{
 	justify-content: space-between;
 }
 #zone {
-	width:70%;
+	width:60%;
 	height:95%;
 	background:url("images/fond.png") no-repeat;
 	background-color: rgba(255, 255, 255, 0.5);
@@ -89,7 +89,7 @@ fieldset{
 	border: 5px outset grey;
 }
 #codeCSS{
-	width:27.5%;
+	width:37.5%;
 	height:95%;
 	background-color: #0B7A75;
 	border: 6px outset #EFEBCE;
