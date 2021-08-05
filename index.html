@@ -233,15 +233,15 @@
 						<fieldset id='onglet_background_color' class="onglet_box">
 							<br/>
 							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
+								<input type ="range" value ="255" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorOne(this.value)" 
 																								onchange ="setRgbBackgroundColorOne(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorTwo(this.value)" 
+								<input type ="range" value ="255" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorTwo(this.value)" 
 																								onchange ="setRgbBackgroundColorTwo(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorThree(this.value)" 
+								<input type ="range" value ="255" max ="255" min ="0" step ="1" class="slider" oninput = "setRgbBackgroundColorThree(this.value)" 
 																								onchange ="setRgbBackgroundColorThree(this.value)">
 							</div>
 							<div class ="flex_row">
@@ -257,13 +257,13 @@
 							<div class="flex_row">
 								<div>
 									<span>HAUT</span>
-									<input type="text" name="" id="">
+									<input type="text" name="margehaut" oninput = "setMarginTop(this.value)" onchange ="setMarginTop(this.value)">
 									<span>DROITE</span>
-									<input type="text" name="" id="">
+									<input type="text" name="margedroite" oninput = "setMarginRight(this.value)" onchange ="setMarginRight(this.value)">
 									<span>BAS</span>
-									<input type="text" name="" id="">
+									<input type="text" name="margebas" oninput = "setMarginBottom(this.value)" onchange ="setMarginBottom(this.value)">
 									<span>GAUCHE</span>
-									<input type="text" name="" id="">
+									<input type="text" name="margegauche" oninput = "setMarginLeft(this.value)" onchange ="setMarginLeft(this.value)">
 								</div>
 							</div>
 						</fieldset>
@@ -274,20 +274,51 @@
 							<div class="flex_row">
 								<div>
 									<span>HAUT</span>
-									<input type="text" name="" id="">
+									<input type="text" name="paddinghaut" oninput = "setPaddingTop(this.value)" onchange ="setPaddingTop(this.value)">
 									<span>DROITE</span>
-									<input type="text" name="" id="">
+									<input type="text" name="paddingdroite" oninput = "setPaddingRight(this.value)" onchange ="setPaddingRight(this.value)">
 									<span>BAS</span>
-									<input type="text" name="" id="">
+									<input type="text" name="paddingbas" oninput = "setPaddingBottom(this.value)" onchange ="setPaddingBottom(this.value)">
 									<span>GAUCHE</span>
-									<input type="text" name="" id="">
+									<input type="text" name="paddinggauche" oninput = "setPaddingLeft(this.value)" onchange ="setPaddingLeft(this.value)">
 								</div>
 							</div>
 						</fieldset>
 			
 						<!-- ==================== BOX SHADOW ==================== -->
-						<fieldset id="onglet_box_shadow" class="onglet_box">	
+						<fieldset id="onglet_box_shadow" class="onglets_box">
 							<br/>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="20" min ="-20" step ="1" class="slider" oninput = "setBoxShadowX(this.value)" 
+									onchange ="setBoxShadowX(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="20" min ="-20" step ="1" class="slider" oninput = "setBoxShadowY(this.value)" 
+									onchange ="setBoxShadowY(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="20" min ="0" step ="1" class="slider" oninput = "setBoxShadowBlur(this.value)" 
+									onchange ="setBoxShadowBlur(this.value)">
+							</div>
+							<select name ="colorTextShadow" oninput ="setColorBoxShadow(this.value)" onchange ="setColorBoxShadow(this.value)">
+								<option value = "">-- Choisissez une couleur --</option>
+								<option value = "aqua">Aqua</option>
+								<option value = "black">Black</option>
+								<option value = "blue">Blue</option>
+								<option value = "Fuchsia">Fuchsia</option>
+								<option value = "gray">Gray</option>
+								<option value = "green">Green</option>
+								<option value = "lime">Lime</option>
+								<option value = "maroon">Maroon</option>
+								<option value = "navy">Navy</option>
+								<option value = "olive">Olive</option>
+								<option value = "purple">Purple</option>
+								<option value = "red">Red</option>
+								<option value = "silver">Silver</option>
+								<option value = "teal">Teal</option>
+								<option value = "white">White</option>
+								<option value = "yellow">Yellow</option>
+							</select><br/><br/>
 						</fieldset>
 
 					</div>
@@ -299,7 +330,7 @@
 			<div id="visuel" class="flexrow">
 				<!-- ==================== ZONE DE PREVISUALISATION ===================== -->
 				<div id="zone">
-					<div id="vue"></div>	
+					<span id="vue"></span>	
 				</div>
 				<!--===================== ZONE DU CODE CSS ====================-->
 				<div id="codeCSS">

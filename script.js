@@ -9,11 +9,13 @@ let weight = [];
 let alignement = [];
 let border = [];
 let fontRgbcolors = ["0","0","0"];
-let backgroundColors = ["255" , "255" , "255"];
+let backgroundColors = ["255" , "255" , "255","0"];
 let textShadows = ["0","0","0","black"];
 let css = document.getElementById('pureCSS');
 let codeCSS = [];
-
+let marge = [0,0,0,0];
+let padding = ["0","0","0","0"];
+let boxShadows = ["0","0","0","black"];
 
 function validate(){
 	vue.innerHTML = '';
@@ -41,10 +43,13 @@ function update() {
 	changeFontRgbColor();
 	changeTextShadow();
 	changeTextAlign();
-	changeBackgroundColor();
 	changeBorderWidth();
 	changeBorderStyle();
-	changeBorderColor();	
+	changeBorderColor();
+	changeBackgroundColor();
+	changeMargin();	
+	changePadding();	
+	changeBoxShadow();	
 	showCss();
 	
 window.requestAnimationFrame(update);

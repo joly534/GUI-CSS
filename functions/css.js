@@ -9,7 +9,7 @@ function showCss(){
 	} else if ((id.value != '') && (classe.value != '')) {
 		balise = '#' + id.value + ', .' + classe.value;
 	} else {
-		balise = 'p';
+		balise = 'span';
 	}
     css.innerHTML= balise + '{<br/>' +  codeCSS.join('<br/>') + '<br/>}';
 }

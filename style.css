@@ -50,16 +50,16 @@ header>div{
 	height: 15em;
 	background-color: #19535F;
 	margin: 0 auto 1em auto;
-	padding: 10px;
+	padding: 5px;
 	box-shadow: 0px 0px 5px 3px black;}
 h1, h2, #slogan { color:#EFEBCE;}
-h2{font-size: 1rem;	text-transform: uppercase;background-color: #19535F;border: 5px solid #EFEBCE;}
-h2:hover{background-color: #247687;border: 5px outset #EFEBCE;transition-duration: 0.8s;}
+h2{font-size: 1rem;	text-transform: uppercase;background-color: #19535F;border: 3px solid #EFEBCE;}
+h2:hover{background-color: #40B5CC;border: 3px outset #EFEBCE;transition-duration: 0.8s;}
 h3 {font-size:0.9rem;background-color:#247687;border: 3px solid #EFEBCE;}
 h3:hover {background-color: #40B5CC;border: 3px outset #EFEBCE;transition: 0.8s;} 
 h2,h3{ color: #EFEBCE;margin: 0px 2px; padding: 5px 10px;}
 #onglets_h2, #onglets_h3{cursor: pointer;}
-#onglets_h3{margin: 1em 0;}
+#onglets_h3{margin: 5px 0;}
 .contenu_onglets_h2, .contenu_onglets_h3{display:none;}
 .contenu_onglets_h2{height: 10em;}
 fieldset{
@@ -68,12 +68,12 @@ fieldset{
 	box-shadow: 0px 0px 10px #EFEBCE;
 	padding: 0px 30px;
 }
-.onglets_text, .onglet_border, .onglet_box{display: none;height: 6em;}
+.onglets_text, .onglet_border, .onglet_box{display: none;height: 7em;}
 
 /******************* ESPACE DE PREVISUALISATION ***********************/
 #visuel{
 	width: 100%;
-	height:70%;
+	height:80%;
 	padding: 10px;
 	display:flex;
 	flex-direction: row;

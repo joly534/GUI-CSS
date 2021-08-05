@@ -127,7 +127,7 @@ function setColorTextShadow(valueColorTextShadow){
 function changeTextShadow(){
 	let ts = css.innerHTML = 'text-shadow: ' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3] + ';';
 	addCSSMultiple(ts, 4, 1);
-	vue.style.textShadow = + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3];
+	vue.style.textShadow = textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3];
 }
 /** FIN */
 
@@ -140,5 +140,4 @@ function changeTextAlign(){
 	addCSS (ta, 5, 1);
 	vue.style.textAlign = alignement[0]
 }
-
 /** FIN */

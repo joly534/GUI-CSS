@@ -47,7 +47,7 @@ function setBorderWidth(valueBorderWidth){
 function changeBorderWidth(){
     let bw = css.innerHTML = 'border-width : ' + border[0] + 'px;';
 	addCSS(bw,7,1);
-    vue.style.borderWidth = '"' + border[0] + 'px"';
+    vue.style.borderWidth = border[0] + 'px"';
 }
 /** FIN */
 
