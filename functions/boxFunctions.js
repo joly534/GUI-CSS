@@ -50,7 +50,7 @@ function setRgbBackgroundColorOpacity(valueBackgroundColorThree){
 function changeBackgroundColor(){
 	let backcol = css.innerHTML = "background-color : rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + 
         backgroundColors[2] + "," + backgroundColors[3] + ");";
-	addCSSMultiple(backcol,9,1);
+	addCSSMultiple(backcol,9);
 	vue.style.backgroundColor ="rgba(" + backgroundColors[0] + "," + backgroundColors[1] + "," + backgroundColors[2] + "," +
         backgroundColors[3] + ")";
 }
@@ -71,7 +71,7 @@ function setMarginLeft(valueMarginLeft) {
 }
 function changeMargin(){
     let valueMargin = css.innerHTML = "margin: " + marge[0] + 'px ' + marge[1] + 'px ' + marge[2] + 'px ' + marge[3] + 'px' + ';';
-    addCSSMultiple(valueMargin,10,1);
+    addCSSMultiple(valueMargin,10);
     vue.style.margin = marge[0] + 'px '  + marge[1] + 'px '  + marge[2] + 'px ' + marge[3] + 'px';
 }
 /** FIN */
@@ -91,7 +91,7 @@ function setPaddingLeft(valuePaddingLeft) {
 }
 function changePadding(){
     let valuePadding = css.innerHTML = "padding: " + padding[0] + 'px ' + padding[1] + 'px ' + padding[2] + 'px ' + padding[3] + 'px' + ';';
-    addCSSMultiple(valuePadding,11,1);
+    addCSSMultiple(valuePadding,11);
     vue.style.padding = padding[0] + 'px '  + padding[1] + 'px '  + padding[2] + 'px '  + padding[3] + 'px';
 }
 /** FIN */
@@ -106,12 +106,12 @@ function setBoxShadowY(valueShadowY){
 function setBoxShadowBlur(valueShadowBlur){
 	boxShadows.splice(2,1,valueShadowBlur);
 }
-function setColorBoxShadow(valueColorTextShadow){
-	boxShadows.splice(3,1,valueColorTextShadow)
+function setColorBoxShadow(valueColorBoxShadow){
+	boxShadows.splice(3,1,valueColorBoxShadow)
 }
 function changeBoxShadow(){
 	let bs = css.innerHTML = 'box-shadow: ' + boxShadows[0] + 'px ' + boxShadows[1] + 'px ' + boxShadows[2] + 'px ' + boxShadows[3] + ';';
-	addCSSMultiple(bs, 12, 1);
+	addCSSMultiple(bs,12);
 	vue.style.boxShadows = boxShadows[0] + 'px ' + boxShadows[1] + 'px ' + boxShadows[2] + 'px ' + boxShadows[3];
 }
 /** FIN */

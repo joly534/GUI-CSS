@@ -67,7 +67,7 @@ function setFontFamily(valueFamilyFont){
 }
 function changeFontFamily(){
 	let ff = css.innerHTML = 'font-family: ' + fontFamily[0] + ';';
-	addCSS(ff, 0, 1);
+	addCSS(ff, 0);
 	vue.style.fontFamily = fontFamily[0];
 }
 /** FIN */
@@ -78,7 +78,7 @@ function setFontSize(valueSizeFont){
 }
 function changeFontSize(){
 	let fs = css.innerHTML = 'font-size: ' + fontSize[0] +  'px;';
-	addCSS(fs,1,1);
+	addCSS(fs,1);
 	vue.style.fontSize = fontSize[0] + 'px';
 }
 /** FIN */
@@ -89,7 +89,7 @@ function setFontWeight(valueWeightFont){
 }
 function changeFontWeight(){
 	let fw = css.innerHTML = "font-weight: " + weight[0] + ';';
-	addCSS(fw,2,1);
+	addCSS(fw,2);
 	vue.style.fontWeight = weight[0];
 }
 /** FIN */
@@ -106,7 +106,7 @@ function setRgbColorFontThree(valueColorFont){
 }
 function changeFontRgbColor(){
 	let fc = css.innerHTML = "font-color: rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ");";
-	addCSSMultiple(fc, 3, 1);
+	addCSSMultiple(fc, 3);
 	vue.style.color ="rgb(" + fontRgbcolors[0] + "," + fontRgbcolors[1] + "," + fontRgbcolors[2] + ")";
 }
 /** FIN */
@@ -126,7 +126,7 @@ function setColorTextShadow(valueColorTextShadow){
 }
 function changeTextShadow(){
 	let ts = css.innerHTML = 'text-shadow: ' + textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3] + ';';
-	addCSSMultiple(ts, 4, 1);
+	addCSSMultiple(ts, 4);
 	vue.style.textShadow = textShadows[0] + 'px ' + textShadows[1] + 'px ' + textShadows[2] + 'px ' + textShadows[3];
 }
 /** FIN */
@@ -137,7 +137,7 @@ function setTextAlign(valueTextAlign){
 }
 function changeTextAlign(){
 	let ta = css.innerHTML = "text-align: " + alignement[0] + ';';
-	addCSS (ta, 5, 1);
+	addCSS (ta, 5);
 	vue.style.textAlign = alignement[0]
 }
 /** FIN */

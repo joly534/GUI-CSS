@@ -32,41 +32,41 @@ function showOngletBorderColor(){
 
 /** BORDER STYLE */
 function setBorderStyle(valueBorderStyle){
-    border.splice(1,1,valueBorderStyle);
+    borderS.splice(0,1,valueBorderStyle);
 }
 function changeBorderStyle(){
-    let bs = css.innerHTML = 'border-style : ' + border[1] + ';';
-	addCSS(bs,6,1);
-    vue.style.borderStyle = border[1];
+    let bstyle = css.innerHTML = 'border-style : ' + borderS[0] + ';';
+	addCSS(bstyle,6);
+    vue.style.borderStyle = borderS[0];
 }
 
 /** BORDER WIDTH */
 function setBorderWidth(valueBorderWidth){
-	border.splice(0,1,valueBorderWidth);
+	borderW.splice(0,1,valueBorderWidth);
 }
 function changeBorderWidth(){
-    let bw = css.innerHTML = 'border-width : ' + border[0] + 'px;';
-	addCSS(bw,7,1);
-    vue.style.borderWidth = border[0] + 'px"';
+    let bw = css.innerHTML = 'border-width : ' + borderW[0] + 'px;';
+	addCSS(bw,7);
+    vue.style.borderWidth = borderW[0] + 'px';
 }
 /** FIN */
 
 /** BORDER COLOR */
 function setBorderColorOne(valueborderColorOne){
-    border.splice(2,1,valueborderColorOne);
+    borderC.splice(0,1,valueborderColorOne);
 }
 
 function setBorderColorTwo(valueborderColorTwo){
-    border.splice(3,1,valueborderColorTwo);    
+    borderC.splice(1,1,valueborderColorTwo);    
 }
 
 function setBorderColorThree(valueborderColorThree){
-    border.splice(4,1,valueborderColorThree);    
+    borderC.splice(2,1,valueborderColorThree);    
 }
 function changeBorderColor(){
-	let bc = css.innerHTML = "border-color : rgb(" + border[2] + "," + border[3] + "," + border[4] + ");";
-	addCSSMultiple(bc,8,1);
-	vue.style.borderColor ="rgb(" + border[2] + "," + border[3] + "," + border[4] + ")";
+	let bc = css.innerHTML = "border-color : rgb(" + borderC[0] + "," + borderC[1] + "," + borderC[2] + ");";
+	addCSSMultiple(bc,8);
+	vue.style.borderColor ="rgb(" + borderC[0] + "," + borderC[1] + "," + borderC[2] + ")";
 }
 /** FIN */
 

@@ -1,21 +1,26 @@
 let text = document.getElementById('text');
 let id = document.getElementById('identification');
 let classe = document.getElementById('classe');
-let balise;
 let vue = document.getElementById('vue');
+let css = document.getElementById('pureCSS');
+
+let balise;
+
 let fontFamily = [];
 let fontSize = [];
 let weight = [];
+let borderS = [];
+let borderW = [];
+let borderC = [];
+let fontRgbcolors = [];
+let textShadows = [];
 let alignement = [];
-let border = [];
-let fontRgbcolors = ["0","0","0"];
-let backgroundColors = ["255" , "255" , "255","0"];
-let textShadows = ["0","0","0","black"];
-let css = document.getElementById('pureCSS');
+let backgroundColors = [];
+let marge = [];
+let padding = [];
+let boxShadows = [];
+
 let codeCSS = [];
-let marge = [0,0,0,0];
-let padding = ["0","0","0","0"];
-let boxShadows = ["0","0","0","black"];
 
 function validate(){
 	vue.innerHTML = '';
@@ -28,13 +33,6 @@ function resetInput(){
 	classe.value = '';
 }
 
-function addCSS(value, index, number){
-		codeCSS.splice(index, number, value);
-}
-
-function addCSSMultiple(value, index, number){
-	codeCSS.splice(index, number, value);
-}
 
 function update() {
 	changeFontFamily();
@@ -51,7 +49,6 @@ function update() {
 	changePadding();	
 	changeBoxShadow();	
 	showCss();
-	
 window.requestAnimationFrame(update);
 }
 
