@@ -31,6 +31,11 @@ function resetInput(){
 	text.value = '';
 	id.value = '';
 	classe.value = '';
+	vue.innerHTML = '';
+	console.log(codeCSS);
+	codeCSS = [];
+	showCss();
+	console.log(codeCSS);
 }
 
 

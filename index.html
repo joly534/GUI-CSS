@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
-	<body class="flexrow">
+	<body>
 		
 		<!-- ==================== CONTENU DE GAUCHE ==================== -->
 		<div id="left_part" class="flexcol">
@@ -20,7 +20,7 @@
 			<!-- ================================================================ -->
 			<!-- ==================== ZONE D'ENTREE DE TEXTE ==================== -->
 			<!-- ================================================================ -->
-			<div class="zone_texte">
+			<div id="zone_texte">
 				<textarea id ="text" name ="texte" type ="text" placeholder = "Votre texte ici / Your text here"></textarea>
 				<input type = "text" name ="id" id ="identification" placeholder = "Saisissez un ID (facultatif)">
 				<input type = "text" name ="classe" id ="classe" placeholder = "Saisissez une classe (facultatif)">
@@ -76,7 +76,7 @@
 						<fieldset id="onglet_font_size" class="onglets_text">
 							<br/>
 							<div>
-								<input type ="range" value ="10" max ="55" min ="10" step ="1" class="slider" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
+								<input type ="range" value ="10" max ="100" min ="10" step ="1" class="slider" oninput = "setFontSize(this.value)" onchange ="setFontSize(this.value)">
 							</div>
 						</fieldset>
 		
@@ -204,15 +204,15 @@
 						<fieldset id='onglet_border_color' class="onglet_border">
 							<br/>
 								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
+									<input type ="range" value ="0" max ="255" min ="0" step ="1" class="slider"  oninput = "setBorderColorOne(this.value)" 
 																									onchange ="setBorderColorOne(this.value)">
 								</div>
 								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorTwo(this.value)" 
+									<input type ="range" value ="0" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorTwo(this.value)" 
 																									onchange ="setBorderColorTwo(this.value)">
 								</div>
 								<div class ="flex_row">
-									<input type ="range" value ="125" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorThree(this.value)" 
+									<input type ="range" value ="0" max ="255" min ="0" step ="1" class="slider" oninput = "setBorderColorThree(this.value)" 
 																									onchange ="setBorderColorThree(this.value)">
 								</div>
 						</fieldset>
@@ -245,7 +245,7 @@
 																								onchange ="setRgbBackgroundColorThree(this.value)">
 							</div>
 							<div class ="flex_row">
-								<input type ="range" value ="0" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
+								<input type ="range" value ="1" max ="1" min ="0" step ="0.1" class="slider" oninput = "setRgbBackgroundColorOpacity(this.value)" 
 																								onchange ="setRgbBackgroundColorOpacity(this.value)">
 							</div>
 							</select><br/><br/>
@@ -254,34 +254,42 @@
 						<!-- ==================== MARGIN ==================== -->
 						<fieldset id="onglet_box_margin" class="onglet_box">
 							<br/>
-							<div class="flex_row">
-								<div>
-									<span>HAUT</span>
-									<input type="text" name="margehaut" oninput = "setMarginTop(this.value)" onchange ="setMarginTop(this.value)">
-									<span>DROITE</span>
-									<input type="text" name="margedroite" oninput = "setMarginRight(this.value)" onchange ="setMarginRight(this.value)">
-									<span>BAS</span>
-									<input type="text" name="margebas" oninput = "setMarginBottom(this.value)" onchange ="setMarginBottom(this.value)">
-									<span>GAUCHE</span>
-									<input type="text" name="margegauche" oninput = "setMarginLeft(this.value)" onchange ="setMarginLeft(this.value)">
-								</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setMarginTop(this.value)" 
+																								onchange ="setMarginTop(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setMarginRight(this.value)" 
+																								onchange ="setMarginRight(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setMarginBottom(this.value)" 
+																								onchange ="setMarginBottom(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setMarginLeft(this.value)" 
+																								onchange ="setMarginLeft(this.value)">
 							</div>
 						</fieldset>
 			
 						<!-- ==================== PADDING ==================== -->
 						<fieldset id="onglet_box_padding" class="onglet_box">
 							<br/>
-							<div class="flex_row">
-								<div>
-									<span>HAUT</span>
-									<input type="text" name="paddinghaut" oninput = "setPaddingTop(this.value)" onchange ="setPaddingTop(this.value)">
-									<span>DROITE</span>
-									<input type="text" name="paddingdroite" oninput = "setPaddingRight(this.value)" onchange ="setPaddingRight(this.value)">
-									<span>BAS</span>
-									<input type="text" name="paddingbas" oninput = "setPaddingBottom(this.value)" onchange ="setPaddingBottom(this.value)">
-									<span>GAUCHE</span>
-									<input type="text" name="paddinggauche" oninput = "setPaddingLeft(this.value)" onchange ="setPaddingLeft(this.value)">
-								</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setPaddingTop(this.value)" 
+																								onchange ="setPaddingTop(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setPaddingRight(this.value)" 
+																								onchange ="setPaddingRight(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setPaddingBottom(this.value)" 
+																								onchange ="setPaddingBottom(this.value)">
+							</div>
+							<div class ="flex_row">
+								<input type ="range" value ="0" max ="100" min ="0" step ="1" class="slider" oninput = "setPaddingLeft(this.value)" 
+																								onchange ="setPaddingLeft(this.value)">
 							</div>
 						</fieldset>
 			

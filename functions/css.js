@@ -14,7 +14,7 @@ function showCss(){
 
 function addCSS(value, index){
 	let position = value.indexOf('undefined');
-	if (position == -1 ){
+	if (position ==  -1 ){
 		codeCSS.splice(index, 1, value);
 	} else {
 		;
